@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-dark-bg: #0A0A0A;
+  --color-dark-card: #121212;
+  --color-brand-red: #DB0909;
+  --color-red-500: #DB0909;
+  --color-red-600: #DB0909;
+  --color-red-700: #b80707;
+  --font-serif: 'Playfair Display', serif;
+}
+
+
+/* লেনিস স্মুথ স্ক্রলের জন্য গ্লোবাল ফিক্স */
+html.lenis, html.lenis body {
+  height: auto !important; /* layout.js এর h-full কে ওভাররাইড করার জন্য */
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  scroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* পুরো ওয়েবসাইটের বেস লাক্সারি ডার্ক স্টাইল */
+body {
+  background-color: var(--color-dark-bg);
+  color: #FFFFFF;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #DB0909;
+  color: #ffffff;
+}
