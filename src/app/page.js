@@ -5,6 +5,7 @@ import DriveResults from "@/components/home/DriveResults";
 import FilmPackages from "@/components/home/FilmPackages";
 import HeroSection from "@/components/home/Hero";
 import KeyPoints from "@/components/home/KeyPoints";
+import MyGallery from "@/components/MyGallery";
 import ProcessSection from "@/components/home/ProcessSection";
 import RecentPostsSection from "@/components/home/RecentPost";
 import RestaurantAssociation from "@/components/home/RestaurantAssociation";
@@ -176,6 +177,7 @@ export default function Home() {
         <KeyPoints />
         <RestaurantAssociation />
         <ServicesGrid />
+        <MyGallery />
         <FilmPackages />
         <DriveResults />
         <TestimonialSection />

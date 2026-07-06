@@ -35,6 +35,13 @@ export default function MyGallery() {
     "https://finalcutmultimedia.com/wp-content/uploads/2025/10/openart-image_TqnE_k4M_1757437194190_raw.jpg",
   ];
 
+  // পুরনো লাইভ সাইটের হুবহু গ্যালারি ক্যাপশন
+  const captions = {
+    0: "Nostalgic workspace captured beautifully",
+    1: "Curiosity Unleashed: Capturing Adventures",
+    2: "Love’s ascending embrace captured",
+  };
+
   const [currentIndex, setCurrentIndex] = useState(null);
   const [visibleCount, setVisibleCount] = useState(12); // শুরুতে ১২টি ছবি দেখাবে
 
@@ -57,7 +64,7 @@ export default function MyGallery() {
       {/* হেডার */}
       <div className="text-center mb-[8vh]">
         <h2 className="text-white text-[8vw] md:text-[3vw] font-black uppercase tracking-widest mb-2">My Gallery</h2>
-        <p className="text-gray-400 text-[3.5vw] md:text-[1vw] uppercase tracking-[0.2em]">Capturing life is moments through my lens</p>
+        <p className="text-gray-400 text-[3.5vw] md:text-[1vw] uppercase tracking-[0.2em]">Capturing life&apos;s moments through my lens</p>
       </div>
 
       {/* গ্যালারি গ্রিড */}
@@ -68,14 +75,21 @@ export default function MyGallery() {
             className="relative w-full h-[400px] overflow-hidden cursor-pointer group border border-white/10"
             onClick={() => setCurrentIndex(index)}
           >
-            <Image 
-              src={src} 
-              alt={`Gallery ${index}`} 
-              fill 
+            <Image
+              src={src}
+              alt={captions[index] || `Final Cut Multimedia gallery photo ${index + 1}`}
+              fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            {captions[index] && (
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-[4vw] md:p-[1.5vw]">
+                <h3 className="text-white text-[3.8vw] md:text-[1vw] font-bold uppercase tracking-wide">
+                  {captions[index]}
+                </h3>
+              </div>
+            )}
           </div>
         ))}
       </div>
