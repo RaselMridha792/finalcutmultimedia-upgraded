@@ -129,3 +129,104 @@ export function buildPageSeo({
   const jsonLd = { "@context": "https://schema.org", "@graph": graph };
   return { metadata, jsonLd };
 }
+
+const PERSON_ID = `${SITE}/#/schema/person/finalcut-author`;
+
+// ব্লগ পোস্টের (Article) SEO — লাইভ সাইটের Yoast @graph অনুযায়ী
+export function buildArticleSeo({
+  path,            // e.g. "2026/07/05/why-fresh-video-content-matters-for-business"
+  title,
+  description,
+  image,
+  imageW,
+  imageH,
+  imageType,
+  publishedTime,
+  modifiedTime,
+  author = "Tyrell",
+  readingTime,
+  breadcrumbName,
+}) {
+  const url = `${SITE}/${path}/`;
+  const mod = modifiedTime || publishedTime;
+
+  const metadata = {
+    title: { absolute: title },
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      locale: "en_US",
+      title,
+      description,
+      url,
+      siteName: "Final Cut Multimedia",
+      publishedTime,
+      modifiedTime: mod,
+      authors: [author],
+      ...(image ? { images: [{ url: image, ...(imageW ? { width: imageW, height: imageH, type: imageType } : {}) }] } : {}),
+    },
+    twitter: { card: "summary_large_image", title, site: "@fc__multimedia" },
+    other: {
+      "article:publisher": "https://www.facebook.com/finalcutphoto/",
+      "article:published_time": publishedTime,
+      "article:modified_time": mod,
+      "twitter:label1": "Est. reading time",
+      "twitter:data1": readingTime,
+      "twitter:label2": "Written by",
+      "twitter:data2": author,
+    },
+  };
+
+  const graph = [
+    {
+      "@type": "Article",
+      "@id": `${url}#article`,
+      isPartOf: { "@id": url },
+      author: { "@id": PERSON_ID },
+      headline: title,
+      datePublished: publishedTime,
+      dateModified: mod,
+      mainEntityOfPage: { "@id": url },
+      publisher: { "@id": `${SITE}/#organization` },
+      image: { "@id": `${url}#primaryimage` },
+      thumbnailUrl: image,
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "WebPage",
+      "@id": url,
+      url,
+      name: title,
+      isPartOf: { "@id": `${SITE}/#website` },
+      ...(image ? { primaryImageOfPage: { "@id": `${url}#primaryimage` }, image: { "@id": `${url}#primaryimage` }, thumbnailUrl: image } : {}),
+      datePublished: publishedTime,
+      dateModified: mod,
+      description,
+      breadcrumb: { "@id": `${url}#breadcrumb` },
+      inLanguage: "en-US",
+      potentialAction: [{ "@type": "ReadAction", target: [url] }],
+    },
+    ...(image
+      ? [{ "@type": "ImageObject", inLanguage: "en-US", "@id": `${url}#primaryimage`, url: image, contentUrl: image, ...(imageW ? { width: imageW, height: imageH } : {}) }]
+      : []),
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${url}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+        { "@type": "ListItem", position: 2, name: breadcrumbName || title },
+      ],
+    },
+    WEBSITE_NODE,
+    ORG_NODE,
+    {
+      "@type": "Person",
+      "@id": PERSON_ID,
+      name: author,
+      url: `${SITE}/`,
+    },
+  ];
+
+  return { metadata, jsonLd: { "@context": "https://schema.org", "@graph": graph } };
+}

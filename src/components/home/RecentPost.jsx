@@ -10,21 +10,21 @@ export default function RecentPostsSection() {
       title: "Why Fresh Video Content Matters for Your Business and What You Are Losing Every Month You Go Without It",
       description: "Learn why fresh video content matters for business success. Fresh filming and editing by Final Cut Multimedia can boost your brand visibility today.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2026/07/why-fresh-video-content-matters-for-business-1024x585.jpeg",
-      link: "/blogs",
+      link: "/2026/07/05/why-fresh-video-content-matters-for-business/",
     },
     {
       id: 2,
       title: "How to Never Run Out of Social Media Content as a Business Owner Without Spending All Your Time Creating It",
       description: "Explore how to never run out of social media content through our expert services in Charlotte, NC, focusing on fresh, impactful videos and brand visibility.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2026/07/how-to-never-run-out-of-social-media-content-1024x585.jpeg",
-      link: "/blogs",
+      link: "/2026/07/05/how-to-never-run-out-of-social-media-content/",
     },
     {
       id: 3,
       title: "What a Social Media Content Retainer Is and Why It Is the Smartest Investment a Growing Business Can Make",
       description: "What is a social media content retainer? We help local businesses in Charlotte, NC stay relevant with fresh video content and strategic social media support.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2026/07/what-is-a-social-media-content-retainer-1024x585.jpeg",
-      link: "/blogs",
+      link: "/2026/07/03/what-is-a-social-media-content-retainer/",
     },
   ];
 
