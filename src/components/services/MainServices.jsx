@@ -40,27 +40,27 @@ export default function MainServices() {
     },
     {
       id: 5,
-      subtitle: "CONSISTENT",
-      title: "MONTHLY CONTENT CREATION",
-      desc: "A repeatable production system that keeps your business visible with professional content all year.",
-      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/87d2047b-a769-426a-8539-3d0b3f8f7a01-scaled.jpeg",
-      link: "/content-for-social-media",
+      subtitle: "AUTOMOTIVE",
+      title: "CAR DEALERSHIP VIDEOS",
+      desc: "Engaging automotive videos designed to highlight your inventory, promotions, and attract more buyers.",
+      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/professional-video-production-for-car-dealers-1-768x439-1.jpeg",
+      link: "/video-production-company-in-charlotte-nc",
     },
     {
       id: 6,
-      subtitle: "VERSATILE",
-      title: "ADDITIONAL PRODUCTION SERVICES",
-      desc: "Headshots, live streaming, drone services, training content, and documentary production.",
+      subtitle: "DYNAMIC",
+      title: "CONTENT FOR SOCIAL MEDIA",
+      desc: "Short-form, platform-optimized content built to capture attention, promotions and boost online engagement.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/1000_F_85861337_0ZeiHG0IC2vPZrQd26KT9SDj4LU9O4fF-1.webp",
-      link: "/additional-production-services",
+      link: "/content-for-social-media",
     },
     {
       id: 7,
       subtitle: "MEMORABLE",
       title: "EVENT PHOTOGRAPHY & VIDEO COVERAGE",
-      desc: "From weddings to community events, we capture the highlights and emotions that matter most.",
+      desc: "From corporate events and conferences to product launches and company gatherings, we capture everything.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/corporate-event-1800-x-1192-wallpaper-8ku83ugoemlritq1.jpg",
-      link: "#",
+      link: "/event-photography-charlotte-nc",
     },
     {
       id: 8,
@@ -68,7 +68,7 @@ export default function MainServices() {
       title: "SAFETY & TRAINING VIDEOS",
       desc: "Clear, instructional productions that simplify learning and promote workplace safety and compliance.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/maxresdefault-1.jpg",
-      link: "#",
+      link: "/additional-production-services",
     }
   ];
 
@@ -88,6 +88,9 @@ export default function MainServices() {
           <h2 className="text-white text-[7vw] md:text-[3vw] font-bold uppercase leading-tight">
             Tailored Multimedia Solutions To Bring Your Vision To Life
           </h2>
+          <p className="text-gray-400 text-[3.5vw] md:text-[1vw] leading-relaxed mt-[2.5vh]">
+            From cinematic productions to professional event coverage, Final Cut Multimedia delivers a full suite of services designed to capture, create, and communicate with impact.
+          </p>
         </div>
         
         <div className="w-full md:w-1/2 flex md:justify-end">
@@ -105,7 +108,7 @@ export default function MainServices() {
 
       {/* ২-কলাম সার্ভিস গ্রিড (৮টি আইটেমের জন্য পারফেক্ট) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[2vh] md:gap-[1.5vw]">
-        {services.slice(0, 6).map((item) => (
+        {services.slice(0, 8).map((item) => (
           <Link 
             href={item.link} 
             key={item.id} 
