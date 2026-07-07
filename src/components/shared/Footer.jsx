@@ -6,20 +6,20 @@ import Link from "next/link";
 export default function Footer() {
   const usefulPages = [
     { name: "HOME", url: "/" },
-    { name: "VIDEO PRODUCTION AGENCY", url: "/video-production-company-charlotte-nc" },
-    { name: "PORTFOLIO", url: "/portfolio" },
+    { name: "VIDEO PRODUCTION AGENCY", url: "/video-production-company-in-charlotte-nc" },
+    { name: "PORTFOLIO", url: "/gallery" },
     { name: "BLOGS", url: "/blogs" },
     { name: "ABOUT US", url: "/about-us" },
-    { name: "FAQ'S", url: "/faq" },
+    { name: "FAQ'S", url: "/faqs" },
   ];
 
   const services = [
-    { name: "EDITING", url: "/our-services/video-editing" },
-    { name: "PHOTOGRAPHY", url: "/our-services/photography-services-charlotte-nc" },
-    { name: "VIDEO PRODUCTION", url: "/video-production-company-charlotte-nc" },
-    { name: "EVENT COVERAGE", url: "/our-services/event-coverage-page" },
-    { name: "MONTHLY CONTENT", url: "/our-services/monthly-content-creation" },
-    { name: "ADDITIONAL PRODUCTION", url: "/our-services/additional-production-services" },
+    { name: "EDITING", url: "/video-editing-in-charlotte-nc" },
+    { name: "PHOTOGRAPHY", url: "/photography-services-charlotte-nc" },
+    { name: "VIDEO PRODUCTION", url: "/video-production-company-in-charlotte-nc" },
+    { name: "EVENT COVERAGE", url: "/event-photography-charlotte-nc" },
+    { name: "MONTHLY CONTENT", url: "/content-for-social-media" },
+    { name: "ADDITIONAL PRODUCTION", url: "/additional-production-services" },
   ];
 
   return (

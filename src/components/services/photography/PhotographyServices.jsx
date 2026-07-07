@@ -122,7 +122,7 @@ export default function PhotographyServices() {
             </p>
             
             <Link 
-              href="/contact" 
+              href="/contact-us-2" 
               className="inline-block bg-red-600 text-white px-[8vw] py-[2vh] md:px-[3vw] md:py-[1.5vh] font-bold text-[3.5vw] md:text-[1vw] uppercase tracking-widest hover:bg-red-700 transition-colors rounded-[4px] shadow-[0_0_15px_rgba(220,38,38,0.3)] mb-[4vh]"
             >
               Contact Us Now

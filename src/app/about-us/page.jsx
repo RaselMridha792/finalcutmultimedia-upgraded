@@ -7,7 +7,7 @@ export const metadata = {
   description: "Meet the Charlotte-based production team helping businesses communicate clearly through professional video and photography.",
 };
 
-const bookingUrl = "/contact#project-form";
+const bookingUrl = "/contact-us-2#project-form";
 
 const strengths = [
   "20+ years of production experience",
@@ -124,7 +124,7 @@ export default function AboutPage() {
               same: create content with purpose and deliver an experience our clients can rely on.
             </p>
             <Link
-              href="/portfolio"
+              href="/gallery"
               className="inline-flex items-center gap-3 border-b border-[#DB0909] pb-1 text-sm font-bold uppercase tracking-[0.16em] text-white transition hover:text-[#DB0909]"
             >
               Explore Our Work

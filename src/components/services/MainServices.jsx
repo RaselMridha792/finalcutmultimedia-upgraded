@@ -12,7 +12,7 @@ export default function MainServices() {
       title: "VIDEO PRODUCTION",
       desc: "High-quality video storytelling crafted to engage your audience and showcase your brand with professionalism.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/11/pbokepuiqgmlaczczfmx1.jpg",
-      link: "/video-production-company-charlotte-nc",
+      link: "/video-production-company-in-charlotte-nc",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export default function MainServices() {
       title: "PHOTOGRAPHY",
       desc: "Creative and detailed photography for events, products, and portraits — capturing moments that last a lifetime.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/ebe708e3-7864-45f8-b7c6-4efaec1b19371.jpg",
-      link: "/our-services/photography-services-charlotte-nc",
+      link: "/photography-services-charlotte-nc",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function MainServices() {
       title: "VIDEO EDITING",
       desc: "Transform raw footage into polished productions with seamless cuts, sound design, and cinematic finishing.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/Mac-Two-Computers-Display.jpg",
-      link: "/our-services/video-editing",
+      link: "/video-editing-in-charlotte-nc",
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ export default function MainServices() {
       title: "EVENT COVERAGE",
       desc: "Professional coverage of conferences, seminars, and business gatherings — presenting your company at its best.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/a8b00388-72df-4154-ac5b-e469b6968b84.jpeg",
-      link: "/our-services/event-coverage-page",
+      link: "/event-photography-charlotte-nc",
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ export default function MainServices() {
       title: "MONTHLY CONTENT CREATION",
       desc: "A repeatable production system that keeps your business visible with professional content all year.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/87d2047b-a769-426a-8539-3d0b3f8f7a01-scaled.jpeg",
-      link: "/our-services/monthly-content-creation",
+      link: "/content-for-social-media",
     },
     {
       id: 6,
@@ -52,7 +52,7 @@ export default function MainServices() {
       title: "ADDITIONAL PRODUCTION SERVICES",
       desc: "Headshots, live streaming, drone services, training content, and documentary production.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/1000_F_85861337_0ZeiHG0IC2vPZrQd26KT9SDj4LU9O4fF-1.webp",
-      link: "/our-services/additional-production-services",
+      link: "/additional-production-services",
     },
     {
       id: 7,

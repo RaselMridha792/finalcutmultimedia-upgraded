@@ -65,7 +65,7 @@ export default function DroneUseCases() {
         {/* Tagline */}
         <div className="text-center mb-[12vh] text-[3.5vw] md:text-[1.1vw] font-medium border-t border-b border-white/10 py-[4vh]">
           From concept to creation, Final Cut Multimedia is committed to delivering visuals that inspire, engage, and leave a lasting impact. 
-          <Link href="/contact" className="text-red-600 ml-[1vw] font-bold uppercase hover:underline inline-flex items-center gap-[0.5vw]">
+          <Link href="/contact-us-2" className="text-red-600 ml-[1vw] font-bold uppercase hover:underline inline-flex items-center gap-[0.5vw]">
              CONTACT US <FiArrowRight />
           </Link>
         </div>

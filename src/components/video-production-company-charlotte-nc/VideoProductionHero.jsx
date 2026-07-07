@@ -47,7 +47,7 @@ export default function VideoProductionHero() {
           </div>
 
           <Link 
-            href="/about" 
+            href="/about-us" 
             className="group inline-flex items-center justify-center gap-[1vw] w-fit px-[8vw] py-[2vh] md:px-[3vw] md:py-[1.5vh] bg-red-600 border-[0.2vw] md:border-[0.1vw] border-red-600 text-white text-[3.5vw] md:text-[1vw] font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:bg-transparent hover:text-red-500"
           >
             READ MORE

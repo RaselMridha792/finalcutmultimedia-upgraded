@@ -72,7 +72,7 @@ export default function PortfolioPage() {
       <section className="border-t border-white/10 px-5 py-20 text-center">
         <h2 className="text-3xl font-black uppercase sm:text-5xl">Ready to Create Your Own Success Story?</h2>
         <p className="mt-5 text-gray-400">Let&apos;s talk about your goals and build content that works for your business.</p>
-        <a href="/contact#project-form" className="mt-8 inline-flex bg-[#DB0909] px-7 py-3 text-sm font-bold uppercase tracking-[0.2em] transition hover:bg-white hover:text-black">Book a Call</a>
+        <a href="/contact-us-2#project-form" className="mt-8 inline-flex bg-[#DB0909] px-7 py-3 text-sm font-bold uppercase tracking-[0.2em] transition hover:bg-white hover:text-black">Book a Call</a>
       </section>
     </main>
   );

@@ -31,19 +31,19 @@ export default function Header() {
     { label: "HOME", href: "/" },
     {
       label: "OUR SERVICES",
-      href: "/our-services",
+      href: "/video-production-our-services",
       subMenuItems: [
-        { label: "Event Coverage", href: "/our-services/event-coverage-page" },
-        { label: "Video Production", href: "/video-production-company-charlotte-nc" },
-        { label: "Photography", href: "/our-services/photography-services-charlotte-nc" },
-        { label: "Video Editing", href: "/our-services/video-editing" },
-        { label: "Monthly Social Media Content", href: "/our-services/monthly-content-creation" },
-        { label: "Additional Production Services", href: "/our-services/additional-production-services" },
+        { label: "Event Coverage", href: "/event-photography-charlotte-nc" },
+        { label: "Video Production", href: "/video-production-company-in-charlotte-nc" },
+        { label: "Photography", href: "/photography-services-charlotte-nc" },
+        { label: "Video Editing", href: "/video-editing-in-charlotte-nc" },
+        { label: "Monthly Social Media Content", href: "/content-for-social-media" },
+        { label: "Additional Production Services", href: "/additional-production-services" },
       ],
     },
-    { label: "PORTFOLIO", href: "/portfolio" },
+    { label: "PORTFOLIO", href: "/gallery" },
     { label: "BLOGS", href: "/blogs" },
-    { label: "CONTACT US", href: "/contact" },
+    { label: "CONTACT US", href: "/contact-us-2" },
     { label: "ABOUT US", href: "/about-us" },
   ];
 

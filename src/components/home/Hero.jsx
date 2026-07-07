@@ -43,7 +43,7 @@ export default function HeroSection() {
           
           {/* Request A Quote বাটন (Primary - Red) */}
           <Link 
-            href="/contact#project-form"
+            href="/contact-us-2#project-form"
             className="group relative inline-flex items-center justify-center 
                        w-[80vw] md:w-[22vw] h-[8vh] md:h-[7vh]
                        border-[0.2vw] md:border-[0.1vw] border-red-600 bg-red-600 
@@ -58,7 +58,7 @@ export default function HeroSection() {
           
           {/* View Our Work বাটন (Secondary - Outline) */}
           <Link 
-            href="/portfolio"
+            href="/gallery"
             className="group relative inline-flex items-center justify-center 
                        w-[80vw] md:w-[22vw] h-[8vh] md:h-[7vh]
                        border-[0.2vw] md:border-[0.1vw] border-white 

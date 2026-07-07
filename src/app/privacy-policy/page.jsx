@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-500">Need help?</p>
           <h2 className="mt-4 text-3xl font-black uppercase sm:text-4xl">We’re happy to answer any questions about our approach.</h2>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="rounded bg-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-red-700">
+            <Link href="/contact-us-2" className="rounded bg-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-red-700">
               Contact Us
             </Link>
           </div>

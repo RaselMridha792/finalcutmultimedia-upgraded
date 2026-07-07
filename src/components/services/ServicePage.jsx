@@ -99,7 +99,7 @@ export default function ServicePage({
             <div className="mt-8 grid max-w-4xl gap-7 border-t border-white/30 pt-7 lg:grid-cols-[1fr_auto] lg:items-end">
               <p className="text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">{heroText}</p>
               <Link
-                href="/contact#project-form"
+                href="/contact-us-2#project-form"
                 className="group inline-flex w-fit items-center gap-3 bg-[#DB0909] px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] transition hover:bg-white hover:text-black"
               >
                 Start a Project
@@ -206,7 +206,7 @@ export default function ServicePage({
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85">{ctaText}</p>
           </div>
           <Link
-            href="/contact#project-form"
+            href="/contact-us-2#project-form"
             className="group inline-flex shrink-0 items-center gap-4 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-black transition hover:bg-black hover:text-white"
           >
             Book a Discovery Call

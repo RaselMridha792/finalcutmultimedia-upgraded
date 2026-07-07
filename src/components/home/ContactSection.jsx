@@ -47,7 +47,7 @@ export default function ContactSection() {
           {/* বুকিং বাটন (শুধুমাত্র Book a Call রাখা হয়েছে) */}
           <div className="flex justify-center">
             <Link 
-              href="/contact#project-form"
+              href="/contact-us-2#project-form"
               className="bg-red-600 border-[0.2vw] md:border-[0.1vw] border-red-600 text-white font-bold text-[3.5vw] md:text-[1vw] tracking-[0.15em] uppercase px-[10vw] py-[2vh] md:px-[4vw] md:py-[1.5vh] hover:bg-transparent hover:text-red-500 transition-all duration-300"
             >
               BOOK A CALL

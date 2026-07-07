@@ -44,7 +44,7 @@ export default function OurWork() {
       <div className="mx-auto grid w-full max-w-none grid-cols-1 gap-[4vw] md:grid-cols-2 md:gap-[2.5vw]">
         {works.map((work) => (
           <Link 
-            href="/portfolio"
+            href="/gallery"
             key={work.id} 
             className="relative w-full aspect-[4/3] md:aspect-video group overflow-hidden rounded-[8px] cursor-pointer shadow-lg block bg-[#111]"
           >
@@ -77,7 +77,7 @@ export default function OurWork() {
       {/* View More Button Section */}
       <div className="text-center mt-[6vh] md:mt-[8vh]">
         <Link 
-          href="/portfolio"
+          href="/gallery"
           className="inline-block bg-transparent border-[2px] border-red-600 text-white py-3 px-10 text-[13px] font-bold tracking-widest uppercase rounded-[4px] transition-all duration-300 hover:bg-red-600 hover:shadow-[0_0_15px_rgba(220,38,38,0.4)]"
         >
           View More

@@ -59,7 +59,7 @@ export default function FAQPage() {
             Reach out and we will help you choose the right production approach for your brand, audience, and timeline.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="rounded bg-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-red-700">
+            <Link href="/contact-us-2" className="rounded bg-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-red-700">
               Contact Us
             </Link>
           </div>
