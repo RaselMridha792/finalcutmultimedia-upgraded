@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // পুরনো WordPress সাইটের মতো সব URL trailing slash সহ (/slug/) — ডিরেক্টরি স্ট্রাকচার হুবহু মিল
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {
