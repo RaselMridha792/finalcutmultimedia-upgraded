@@ -13,13 +13,37 @@ export default function Footer() {
     { name: "FAQ'S", url: "/faqs" },
   ];
 
+  // মেনুতে না থাকা সব সার্ভিস পেজ এখানে (২ কলামে)
   const services = [
-    { name: "EDITING", url: "/video-editing-in-charlotte-nc" },
+    { name: "VIDEO PRODUCTION", url: "/video-production" },
+    { name: "VIDEO PRODUCTION COMPANY", url: "/video-production-company-in-charlotte-nc" },
+    { name: "CORPORATE VIDEO PRODUCTION", url: "/corporate-video-production" },
+    { name: "DRONE VIDEO PRODUCTION", url: "/drone-video-production-in-charlotte-nc" },
+    { name: "VIDEO EDITING", url: "/video-editing-in-charlotte-nc" },
     { name: "PHOTOGRAPHY", url: "/photography-services-charlotte-nc" },
-    { name: "VIDEO PRODUCTION", url: "/video-production-company-in-charlotte-nc" },
-    { name: "EVENT COVERAGE", url: "/event-photography-charlotte-nc" },
-    { name: "MONTHLY CONTENT", url: "/content-for-social-media" },
-    { name: "ADDITIONAL PRODUCTION", url: "/additional-production-services" },
+    { name: "EVENT PHOTOGRAPHY & VIDEO", url: "/event-photography-charlotte-nc" },
+    { name: "HEADSHOT PHOTOGRAPHY", url: "/headshot-photography" },
+    { name: "HIGH SCHOOL PHOTOGRAPHY", url: "/high-school-photography" },
+    { name: "CONTENT FOR SOCIAL MEDIA", url: "/content-for-social-media" },
+    { name: "CAR DEALERSHIP VIDEOS", url: "/car-dealership-videos" },
+    { name: "TESTIMONIAL VIDEOS", url: "/testimonial-videos" },
+    { name: "SAFETY & TRAINING VIDEOS", url: "/safety-and-training-videos" },
+    { name: "LIVE STREAM SERVICE", url: "/live-stream" },
+    { name: "DOCUMENTARY VIDEO PRODUCTION", url: "/documentary-video-production" },
+    { name: "VIDEO AGENCY IN CHARLOTTE", url: "/video-agency-in-charlotte-nc" },
+    { name: "ADDITIONAL PRODUCTION SERVICES", url: "/additional-production-services" },
+  ];
+
+  // এলাকা পেজ (Areas We Serve) — ২ কলামে
+  const areas = [
+    { name: "CHARLOTTE, NC", url: "/video-production-charlotte" },
+    { name: "GASTONIA, NC", url: "/video-production-gastonia" },
+    { name: "CONCORD, NC", url: "/video-production-concord" },
+    { name: "KANNAPOLIS, NC", url: "/video-production-kannapolis" },
+    { name: "HUNTERSVILLE, NC", url: "/video-production-huntersville-nc" },
+    { name: "MOORESVILLE, NC", url: "/video-production-mooresville-nc" },
+    { name: "ROCK HILL, SC", url: "/video-production-rock-hill-nc" },
+    { name: "MINT HILL, NC", url: "/video-production-mint-hill-nc" },
   ];
 
   return (
@@ -92,12 +116,13 @@ export default function Footer() {
               Services
             </h3>
 
-            <ul className="flex flex-col gap-[1.8vh]">
+            {/* বেশি সার্ভিস, তাই ২ কলাম (২ রো-স্টাইল) */}
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-[2vw] gap-y-[1.6vh]">
               {services.map((service, index) => (
                 <li key={index}>
                   <Link
                     href={service.url}
-                    className="inline-block text-gray-400 text-[3.5vw] md:text-[1vw] lg:text-[0.9vw] font-medium tracking-wider hover:text-red-600 hover:translate-x-1 transition-all duration-300 uppercase"
+                    className="inline-block text-gray-400 text-[3.5vw] md:text-[0.95vw] lg:text-[0.85vw] font-medium tracking-wider hover:text-red-600 hover:translate-x-1 transition-all duration-300 uppercase"
                   >
                     {service.name}
                   </Link>
@@ -162,6 +187,24 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
+          </div>
+        </div>
+
+        {/* Areas We Serve — ২ রো (wrap) */}
+        <div className="w-full border-t border-white/10 pt-[5vh] mb-[6vh]">
+          <h3 className="text-white text-[4.5vw] md:text-[1.2vw] lg:text-[1vw] font-bold uppercase tracking-widest mb-[3vh]">
+            Areas We Serve
+          </h3>
+          <div className="flex flex-wrap gap-x-[3vw] gap-y-[1.6vh] md:gap-x-[2vw]">
+            {areas.map((area, index) => (
+              <Link
+                key={index}
+                href={area.url}
+                className="text-gray-400 text-[3.3vw] md:text-[0.95vw] lg:text-[0.85vw] font-medium tracking-wider hover:text-red-600 transition-colors uppercase whitespace-nowrap"
+              >
+                {area.name}
+              </Link>
+            ))}
           </div>
         </div>
 

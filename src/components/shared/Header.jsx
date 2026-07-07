@@ -29,53 +29,22 @@ export default function Header() {
 
   const menuItems = [
     { label: "HOME", href: "/" },
-    { label: "VIDEO PRODUCTION COMPANY IN CHARLOTTE NC", href: "/video-production-company-in-charlotte-nc" },
     {
       label: "OUR SERVICES",
       href: "/video-production-our-services",
       subMenuItems: [
-        { label: "Drone Video Production in Charlotte, NC", href: "/drone-video-production-in-charlotte-nc" },
+        { label: "Event Coverage", href: "/event-photography-charlotte-nc" },
+        { label: "Video Production", href: "/video-production-company-in-charlotte-nc" },
         { label: "Photography", href: "/photography-services-charlotte-nc" },
-        { label: "Event Photography & Video", href: "/event-photography-charlotte-nc" },
-        { label: "Headshot Photography", href: "/headshot-photography" },
-        { label: "High School Photography", href: "/high-school-photography" },
-        { label: "Video Production", href: "/video-production" },
-        { label: "Video Editing in Charlotte NC", href: "/video-editing-in-charlotte-nc" },
-        { label: "Corporate Video Production", href: "/corporate-video-production" },
-        { label: "Car Dealership Videos", href: "/car-dealership-videos" },
-        { label: "Content for Social Media", href: "/content-for-social-media" },
-        { label: "Testimonial Videos", href: "/testimonial-videos" },
-        { label: "Safety and Training Videos", href: "/safety-and-training-videos" },
-        { label: "Live Stream Service in Charlotte NC", href: "/live-stream" },
-        { label: "Documentary Video Production", href: "/documentary-video-production" },
-        { label: "Video Agency in Charlotte, NC", href: "/video-agency-in-charlotte-nc" },
+        { label: "Video Editing", href: "/video-editing-in-charlotte-nc" },
+        { label: "Monthly Social Media Content", href: "/content-for-social-media" },
+        { label: "Additional Production Services", href: "/additional-production-services" },
       ],
     },
-    {
-      label: "AREAS WE SERVE",
-      href: "/video-production-charlotte",
-      subMenuItems: [
-        { label: "Charlotte Video Company", href: "/video-production-charlotte" },
-        { label: "Gastonia Video Company", href: "/video-production-gastonia" },
-        { label: "Kannapolis Video Company", href: "/video-production-kannapolis" },
-        { label: "Concord Video Company", href: "/video-production-concord" },
-        { label: "Huntersville Video Company", href: "/video-production-huntersville-nc" },
-        { label: "Mooresville Video Company", href: "/video-production-mooresville-nc" },
-        { label: "Rock Hill Video Company", href: "/video-production-rock-hill-nc" },
-        { label: "Mint Hill Video Company", href: "/video-production-mint-hill-nc" },
-      ],
-    },
+    { label: "PORTFOLIO", href: "/gallery" },
     { label: "BLOGS", href: "/blogs" },
     { label: "CONTACT US", href: "/contact-us-2" },
-    {
-      label: "ABOUT US",
-      href: "/about-us",
-      subMenuItems: [
-        { label: "FAQs", href: "/faqs" },
-        { label: "Privacy Policy", href: "/privacy-policy" },
-        { label: "Gallery", href: "/gallery" },
-      ],
-    },
+    { label: "ABOUT US", href: "/about-us" },
   ];
 
   return (
