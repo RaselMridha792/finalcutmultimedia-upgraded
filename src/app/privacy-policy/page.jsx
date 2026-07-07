@@ -1,8 +1,102 @@
 import Link from "next/link";
 
+const PAGE_URL = "https://finalcutmultimedia.com/privacy-policy/";
+const META_DESC =
+  "Learn how Final Cut Multimedia collects, uses, and protects your personal information. We respect your privacy and are committed to safeguarding your data when you visit our website or work with us for video and photography services.";
+
+// ================= লাইভ সাইটের হুবহু ১০০% SEO =================
+export const metadata = {
+  title: { absolute: "Privacy Policy - Final Cut Multimedia" },
+  description: META_DESC,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    type: "article",
+    locale: "en_US",
+    title: "Privacy Policy",
+    description: META_DESC,
+    url: PAGE_URL,
+    siteName: "Final Cut Multimedia",
+    modifiedTime: "2026-01-05T19:31:54+00:00",
+  },
+  twitter: { card: "summary_large_image", site: "@fc__multimedia" },
+  other: {
+    "article:publisher": "https://www.facebook.com/finalcutphoto/",
+    "article:modified_time": "2026-01-05T19:31:54+00:00",
+    "twitter:label1": "Est. reading time",
+    "twitter:data1": "4 minutes",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": PAGE_URL,
+      url: PAGE_URL,
+      name: "Privacy Policy - Final Cut Multimedia",
+      isPartOf: { "@id": "https://finalcutmultimedia.com/#website" },
+      datePublished: "2025-11-05T01:00:29+00:00",
+      dateModified: "2026-01-05T19:31:54+00:00",
+      description: META_DESC,
+      breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
+      inLanguage: "en-US",
+      potentialAction: [{ "@type": "ReadAction", target: [PAGE_URL] }],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${PAGE_URL}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://finalcutmultimedia.com/" },
+        { "@type": "ListItem", position: 2, name: "Privacy Policy" },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://finalcutmultimedia.com/#website",
+      url: "https://finalcutmultimedia.com/",
+      name: "Final Cut Multimedia",
+      description: "",
+      publisher: { "@id": "https://finalcutmultimedia.com/#organization" },
+      potentialAction: [
+        {
+          "@type": "SearchAction",
+          target: { "@type": "EntryPoint", urlTemplate: "https://finalcutmultimedia.com/?s={search_term_string}" },
+          "query-input": { "@type": "PropertyValueSpecification", valueRequired: true, valueName: "search_term_string" },
+        },
+      ],
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://finalcutmultimedia.com/#organization",
+      name: "Final Cut Multimedia",
+      url: "https://finalcutmultimedia.com/",
+      logo: {
+        "@type": "ImageObject",
+        inLanguage: "en-US",
+        "@id": "https://finalcutmultimedia.com/#/schema/logo/image/",
+        url: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/FINALCUT-LOGO-23582.png",
+        contentUrl: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/FINALCUT-LOGO-23582.png",
+        width: 690,
+        height: 706,
+        caption: "Final Cut Multimedia",
+      },
+      image: { "@id": "https://finalcutmultimedia.com/#/schema/logo/image/" },
+      sameAs: [
+        "https://www.facebook.com/finalcutphoto/",
+        "https://x.com/fc__multimedia",
+        "https://www.linkedin.com/company/final-cut-multimedia/",
+        "https://www.instagram.com/fcmultimedia/",
+      ],
+    },
+  ],
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-[#060606] text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <section className="relative flex min-h-[60vh] items-center overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(239,68,68,0.18),_transparent_45%)]" />
         <div className="absolute inset-0 bg-black/70" />

@@ -1,6 +1,10 @@
 import ServicePage from "@/components/services/ServicePage";
 
-export const metadata = { title: "Additional Production Services | Final Cut Multimedia" };
+export const metadata = {
+  title: "Additional Production Services | Final Cut Multimedia",
+  description:
+    "Specialized production services from Final Cut Multimedia in Charlotte, NC — executive headshots, live streaming, drone and aerial footage, training videos, and documentary storytelling for businesses and organizations.",
+};
 
 export default function AdditionalProductionServicesPage() {
   return <ServicePage
