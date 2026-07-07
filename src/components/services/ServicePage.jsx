@@ -31,24 +31,33 @@ function ItemGrid({ title, items, sectionNumber, light = false }) {
         </div>
 
         <div className="grid border-l border-t border-white/15 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((item, index) => (
-            <article
-              key={item}
-              className="group relative min-h-36 overflow-hidden border-b border-r border-white/15 bg-black/20 p-6 transition-colors duration-500 hover:bg-[#DB0909] sm:min-h-44 sm:p-8"
-            >
-              <span className="text-xs font-bold tracking-[0.2em] text-[#DB0909] transition-colors group-hover:text-white/70">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="mt-8 max-w-sm text-base font-bold uppercase leading-7 tracking-[0.06em] text-white sm:text-lg">
-                {item}
-              </p>
-              <ArrowUpRight
-                className="absolute bottom-6 right-6 translate-y-3 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
-                size={21}
-                aria-hidden="true"
-              />
-            </article>
-          ))}
+          {items.map((item, index) => {
+            const label = typeof item === "string" ? item : item.label;
+            const desc = typeof item === "string" ? null : item.desc;
+            return (
+              <article
+                key={label}
+                className="group relative min-h-36 overflow-hidden border-b border-r border-white/15 bg-black/20 p-6 transition-colors duration-500 hover:bg-[#DB0909] sm:min-h-44 sm:p-8"
+              >
+                <span className="text-xs font-bold tracking-[0.2em] text-[#DB0909] transition-colors group-hover:text-white/70">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-8 max-w-sm text-base font-bold uppercase leading-7 tracking-[0.06em] text-white sm:text-lg">
+                  {label}
+                </p>
+                {desc && (
+                  <p className="mt-3 max-w-md text-sm font-normal leading-6 text-white/60 transition-colors group-hover:text-white/85">
+                    {desc}
+                  </p>
+                )}
+                <ArrowUpRight
+                  className="absolute bottom-6 right-6 translate-y-3 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                  size={21}
+                  aria-hidden="true"
+                />
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -68,6 +77,7 @@ export default function ServicePage({
   showProcess = true,
   whyTitle = "Why Choose Final Cut Multimedia?",
   why,
+  faqs = [],
   ctaTitle,
   ctaText,
 }) {
@@ -196,6 +206,25 @@ export default function ServicePage({
           </div>
         </div>
       </section>
+
+      {faqs.length > 0 && (
+        <section className="bg-[#0a0a0a]">
+          <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#DB0909]">FAQ</p>
+            <h2 className="mb-12 max-w-3xl text-3xl font-black uppercase leading-[1.05] sm:text-5xl">
+              Frequently Asked Questions
+            </h2>
+            <div className="divide-y divide-white/15 border-y border-white/15">
+              {faqs.map(({ q, a }) => (
+                <div key={q} className="py-8">
+                  <h3 className="text-lg font-bold text-white sm:text-xl">{q}</h3>
+                  <p className="mt-3 max-w-4xl text-base leading-8 text-white/60">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="relative overflow-hidden bg-[#DB0909] text-white">
         <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(135deg,transparent_45%,#000_45%,#000_55%,transparent_55%)] [background-size:18px_18px]" />
