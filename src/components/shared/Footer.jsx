@@ -13,25 +13,45 @@ export default function Footer() {
     { name: "FAQ'S", url: "/faqs" },
   ];
 
-  // মেনুতে না থাকা সব সার্ভিস পেজ এখানে (২ কলামে)
-  const services = [
-    { name: "VIDEO PRODUCTION", url: "/video-production" },
-    { name: "VIDEO PRODUCTION COMPANY", url: "/video-production-company-in-charlotte-nc" },
-    { name: "CORPORATE VIDEO PRODUCTION", url: "/corporate-video-production" },
-    { name: "DRONE VIDEO PRODUCTION", url: "/drone-video-production-in-charlotte-nc" },
-    { name: "VIDEO EDITING", url: "/video-editing-in-charlotte-nc" },
-    { name: "PHOTOGRAPHY", url: "/photography-services-charlotte-nc" },
-    { name: "EVENT PHOTOGRAPHY & VIDEO", url: "/event-photography-charlotte-nc" },
-    { name: "HEADSHOT PHOTOGRAPHY", url: "/headshot-photography" },
-    { name: "HIGH SCHOOL PHOTOGRAPHY", url: "/high-school-photography" },
-    { name: "CONTENT FOR SOCIAL MEDIA", url: "/content-for-social-media" },
-    { name: "CAR DEALERSHIP VIDEOS", url: "/car-dealership-videos" },
-    { name: "TESTIMONIAL VIDEOS", url: "/testimonial-videos" },
-    { name: "SAFETY & TRAINING VIDEOS", url: "/safety-and-training-videos" },
-    { name: "LIVE STREAM SERVICE", url: "/live-stream" },
-    { name: "DOCUMENTARY VIDEO PRODUCTION", url: "/documentary-video-production" },
-    { name: "VIDEO AGENCY IN CHARLOTTE", url: "/video-agency-in-charlotte-nc" },
-    { name: "ADDITIONAL PRODUCTION SERVICES", url: "/additional-production-services" },
+  // মেনুতে না থাকা সার্ভিস পেজগুলো ক্যাটাগরি অনুযায়ী (৪ কলামে ভরে যায়)
+  const serviceCategories = [
+    {
+      heading: "Video Production",
+      items: [
+        { name: "Video Production", url: "/video-production" },
+        { name: "Video Production Company", url: "/video-production-company-in-charlotte-nc" },
+        { name: "Corporate Video Production", url: "/corporate-video-production" },
+        { name: "Video Agency in Charlotte", url: "/video-agency-in-charlotte-nc" },
+      ],
+    },
+    {
+      heading: "Editing & Content",
+      items: [
+        { name: "Video Editing", url: "/video-editing-in-charlotte-nc" },
+        { name: "Documentary Video Production", url: "/documentary-video-production" },
+        { name: "Content for Social Media", url: "/content-for-social-media" },
+        { name: "Testimonial Videos", url: "/testimonial-videos" },
+      ],
+    },
+    {
+      heading: "Photography",
+      items: [
+        { name: "Photography", url: "/photography-services-charlotte-nc" },
+        { name: "Event Photography & Video", url: "/event-photography-charlotte-nc" },
+        { name: "Headshot Photography", url: "/headshot-photography" },
+        { name: "High School Photography", url: "/high-school-photography" },
+      ],
+    },
+    {
+      heading: "Specialized Services",
+      items: [
+        { name: "Drone Video Production", url: "/drone-video-production-in-charlotte-nc" },
+        { name: "Car Dealership Videos", url: "/car-dealership-videos" },
+        { name: "Safety & Training Videos", url: "/safety-and-training-videos" },
+        { name: "Live Stream Service", url: "/live-stream" },
+        { name: "Additional Production Services", url: "/additional-production-services" },
+      ],
+    },
   ];
 
   // এলাকা পেজ (Areas We Serve) — ২ কলামে
@@ -67,7 +87,7 @@ export default function Footer() {
        
 
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[7vh] lg:gap-[4vw] mb-[8vh]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[7vh] lg:gap-[4vw] mb-[8vh]">
           
           {/* About */}
           <div className="flex flex-col">
@@ -104,27 +124,6 @@ export default function Footer() {
                     className="inline-block text-gray-400 text-[3.5vw] md:text-[1vw] lg:text-[0.9vw] font-medium tracking-wider hover:text-red-600 hover:translate-x-1 transition-all duration-300 uppercase"
                   >
                     {page.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="flex flex-col">
-            <h3 className="text-white text-[4.5vw] md:text-[1.2vw] lg:text-[1vw] font-bold uppercase tracking-widest mb-[3vh]">
-              Services
-            </h3>
-
-            {/* বেশি সার্ভিস, তাই ২ কলাম (২ রো-স্টাইল) */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-[2vw] gap-y-[1.6vh]">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    href={service.url}
-                    className="inline-block text-gray-400 text-[3.5vw] md:text-[0.95vw] lg:text-[0.85vw] font-medium tracking-wider hover:text-red-600 hover:translate-x-1 transition-all duration-300 uppercase"
-                  >
-                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -187,6 +186,34 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
+          </div>
+        </div>
+
+        {/* Our Services — ক্যাটাগরি অনুযায়ী ৪ কলাম */}
+        <div className="w-full border-t border-white/10 pt-[5vh] mb-[6vh]">
+          <h3 className="text-white text-[4.5vw] md:text-[1.2vw] lg:text-[1vw] font-bold uppercase tracking-widest mb-[4vh]">
+            Our Services
+          </h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[4vw] gap-y-[5vh] lg:gap-x-[3vw]">
+            {serviceCategories.map((cat, index) => (
+              <div key={index} className="flex flex-col">
+                <h4 className="text-red-600 text-[3.5vw] md:text-[1vw] lg:text-[0.85vw] font-bold uppercase tracking-[0.15em] mb-[2.5vh]">
+                  {cat.heading}
+                </h4>
+                <ul className="flex flex-col gap-[1.6vh]">
+                  {cat.items.map((service, i) => (
+                    <li key={i}>
+                      <Link
+                        href={service.url}
+                        className="inline-block text-gray-400 text-[3.3vw] md:text-[0.95vw] lg:text-[0.85vw] font-medium tracking-wider hover:text-red-600 hover:translate-x-1 transition-all duration-300 uppercase"
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
