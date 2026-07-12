@@ -15,8 +15,8 @@ function ItemGrid({ title, items, sectionNumber, light = false }) {
 
   return (
     <section className={light ? "bg-[#111]" : "bg-[#070707]"}>
-      <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-        <div className="mb-10 flex items-end justify-between gap-8 border-b border-white/15 pb-7 lg:mb-14">
+      <div className="mx-auto w-full max-w-[2160px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28 xl:px-16">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 border-b border-white/15 pb-7 sm:flex-row sm:items-end sm:gap-8 lg:mb-14">
           <div>
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#DB0909]">
               {sectionNumber}
@@ -30,7 +30,7 @@ function ItemGrid({ title, items, sectionNumber, light = false }) {
           </p>
         </div>
 
-        <div className="grid border-l border-t border-white/15 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 border-l border-t border-white/15 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => {
             const label = typeof item === "string" ? item : item.label;
             const desc = typeof item === "string" ? null : item.desc;
@@ -97,17 +97,17 @@ export default function ServicePage({
         <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-black/40" />
         <div className="absolute inset-5 border border-white/15 sm:inset-8" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-8 pb-16 pt-40 sm:px-14 lg:px-16 lg:pb-24">
-          <div className="max-w-5xl">
+        <div className="relative z-10 mx-auto w-full min-w-0 max-w-[2160px] px-6 pb-16 pt-36 sm:px-14 sm:pt-40 lg:px-12 lg:pb-24 xl:px-16">
+          <div className="max-w-6xl">
             <p className="mb-5 flex items-center gap-4 text-xs font-bold uppercase tracking-[0.35em] text-[#ff3131] sm:text-sm">
               <span className="h-px w-10 bg-[#DB0909]" />
               {eyebrow}
             </p>
-            <h1 className="text-4xl font-black uppercase leading-[0.96] tracking-[-0.03em] sm:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="text-[2rem] font-black uppercase leading-none tracking-[-0.03em] wrap-break-word hyphens-none sm:text-6xl sm:leading-[0.96] lg:text-7xl xl:text-8xl">
               {title}
             </h1>
-            <div className="mt-8 grid max-w-4xl gap-7 border-t border-white/30 pt-7 lg:grid-cols-[1fr_auto] lg:items-end">
-              <p className="text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">{heroText}</p>
+            <div className="mt-8 grid grid-cols-1 max-w-5xl gap-7 border-t border-white/30 pt-7 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+              <p className="min-w-0 text-lg leading-8 text-white/80 sm:text-xl sm:leading-9">{heroText}</p>
               <Link
                 href="/contact-us-2#project-form"
                 className="group inline-flex w-fit items-center gap-3 bg-[#DB0909] px-6 py-4 text-xs font-bold uppercase tracking-[0.2em] transition hover:bg-white hover:text-black"
@@ -123,7 +123,7 @@ export default function ServicePage({
       </section>
 
       <section className="bg-[#070707]">
-        <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12 lg:py-28">
+        <div className="mx-auto grid w-full max-w-[2160px] grid-cols-1 gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12 lg:py-28 xl:px-16">
           <div className="relative min-h-[380px] overflow-hidden border border-white/15 lg:min-h-[600px]">
             <Image
               src={image}
@@ -169,12 +169,12 @@ export default function ServicePage({
           <div className="absolute -right-20 top-0 select-none text-[18rem] font-black leading-none text-black/[0.025]" aria-hidden="true">
             FCM
           </div>
-          <div className="relative mx-auto max-w-[1440px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="relative mx-auto w-full max-w-[2160px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28 xl:px-16">
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#DB0909]">Our Process</p>
             <h2 className="mt-5 max-w-4xl text-4xl font-black uppercase leading-none sm:text-6xl">
               From first idea to final delivery.
             </h2>
-            <div className="mt-14 grid border-l border-t border-black/20 md:grid-cols-5">
+            <div className="mt-14 grid grid-cols-1 border-l border-t border-black/20 md:grid-cols-5">
               {defaultProcess.map(([number, step, text]) => (
                 <article key={step} className="border-b border-r border-black/20 p-6 lg:p-8">
                   <span className="text-sm font-black text-[#DB0909]">{number}</span>
@@ -188,12 +188,12 @@ export default function ServicePage({
       )}
 
       <section className="bg-[#070707]">
-        <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20 lg:px-12 lg:py-28">
+        <div className="mx-auto grid w-full max-w-[2160px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20 lg:px-12 lg:py-28 xl:px-16">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#DB0909]">The Final Cut Difference</p>
             <h2 className="mt-5 text-3xl font-black uppercase leading-[1.05] sm:text-5xl">{whyTitle}</h2>
           </div>
-          <div className="grid border-t border-white/15 sm:grid-cols-2">
+          <div className="grid grid-cols-1 border-t border-white/15 sm:grid-cols-2">
             {why.map((item, index) => (
               <div
                 key={item}
@@ -209,7 +209,7 @@ export default function ServicePage({
 
       {faqs.length > 0 && (
         <section className="bg-[#0a0a0a]">
-          <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mx-auto w-full max-w-[2160px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28 xl:px-16">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#DB0909]">FAQ</p>
             <h2 className="mb-12 max-w-3xl text-3xl font-black uppercase leading-[1.05] sm:text-5xl">
               Frequently Asked Questions
@@ -228,7 +228,7 @@ export default function ServicePage({
 
       <section className="relative overflow-hidden bg-[#DB0909] text-white">
         <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(135deg,transparent_45%,#000_45%,#000_55%,transparent_55%)] [background-size:18px_18px]" />
-        <div className="relative mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-10 px-5 py-20 sm:px-8 lg:flex-row lg:items-end lg:px-12 lg:py-24">
+        <div className="relative mx-auto flex w-full max-w-[2160px] flex-col items-start justify-between gap-10 px-5 py-20 sm:px-8 lg:flex-row lg:items-end lg:px-12 lg:py-24 xl:px-16">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.35em] text-white/70">Have a project in mind?</p>
             <h2 className="mt-5 max-w-4xl text-4xl font-black uppercase leading-[0.98] sm:text-6xl">{ctaTitle}</h2>
