@@ -35,13 +35,13 @@ export default function ContactSection() {
           <div className="flex flex-col md:flex-row items-center gap-[2vw] md:gap-[1.5vw] mb-[3vh]">
             <div className="hidden md:block w-[0.2vw] h-[6vh] bg-red-600"></div>
             <h2 className="text-white text-[8vw] md:text-[4vw] font-black tracking-tight uppercase leading-tight">
-              LET&apos;S BRING YOUR <span className="text-red-600">VISION</span> TO LIFE
+              READY TO BRING YOUR <span className="text-red-600">VISION</span> TO LIFE?
             </h2>
           </div>
 
-          {/* শর্ট ডেসক্রিপশন — লাইভ সাইটের হুবহু */}
-          <p className="text-gray-300 text-[4vw] md:text-[1.1vw] max-w-[85vw] md:max-w-[50vw] leading-relaxed mb-[6vh]">
-            Have an idea for a video, event, or photoshoot? At Final Cut Multimedia, we&apos;re here to turn your vision into reality with creative storytelling and professional production. Whether it&apos;s corporate events, social media content, or training videos, we&apos;re just one message away.
+          {/* শর্ট ডেসক্রিপশন (Request a quote কথাটি রিমুভ করা হয়েছে) */}
+          <p className="text-gray-300 text-[4vw] md:text-[1.1vw] max-w-[85vw] md:max-w-[45vw] leading-relaxed mb-[6vh]">
+            Let&apos;s discuss your next big project. Book a call today, and let our creative experts handle the rest.
           </p>
 
           {/* বুকিং বাটন (শুধুমাত্র Book a Call রাখা হয়েছে) */}

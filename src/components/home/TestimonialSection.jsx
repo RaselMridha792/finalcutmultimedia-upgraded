@@ -8,23 +8,23 @@ export default function TestimonialSection() {
   const reviews = [
     {
       id: 1,
-      name: "Brandon Miller",
-      time: "Business Owner",
-      text: "Final Cut Multimedia completely transformed the way we showcase our business. Their video production and editing team created stunning visuals that captured our brand perfectly. Professional, creative, and always on time!",
+      name: "Kelly King",
+      time: "1 month ago",
+      text: "Final Cut Multimedia went above and beyond for our project. The team was highly professional, easy to work with, and the final video was absolutely stunning. Highly recommend their services!",
       rating: 5,
     },
     {
       id: 2,
-      name: "David R",
-      time: "Event Manager",
-      text: "We hired Final Cut Multimedia for our corporate event coverage, and the results were beyond expectations. The photography and video highlight reel were polished and truly memorable. They made the whole process stress-free.",
+      name: "Marcus Davis",
+      time: "3 months ago",
+      text: "Absolutely amazing experience. They handled our corporate event perfectly and delivered a high-quality promotional video that our whole team loved. Promptness and picture quality were top-notch.",
       rating: 5,
     },
     {
       id: 3,
-      name: "Emily Johnson",
-      time: "Marketing Director",
-      text: "The car dealership video and social media content they produced for us boosted engagement instantly. Their attention to detail and storytelling style is unmatched. Highly recommended for any business wanting to stand out online.",
+      name: "Sarah Powell",
+      time: "4 months ago",
+      text: "The drone footage they captured for our real estate listing was breathtaking. They are very prompt, professional, and true experts in their craft. They truly brought our vision to life.",
       rating: 5,
     },
   ];
@@ -45,12 +45,9 @@ export default function TestimonialSection() {
           <div className="flex items-center gap-[1.5vw]">
             <div className="w-[0.8vw] md:w-[0.2vw] h-[5vh] bg-red-600"></div>
             <h2 className="text-white text-[7vw] md:text-[3.5vw] font-black tracking-widest uppercase leading-none">
-              Clients Speak, Our Work Resonates
+              CLIENT TESTIMONIALS
             </h2>
           </div>
-          <p className="text-gray-400 text-[3.5vw] md:text-[1vw] leading-relaxed max-w-none md:max-w-[60vw] mt-[3vh]">
-            At Final Cut Multimedia, our passion is bringing your vision to life. From cinematic video production to professional photography, we craft content that tells your story with impact. Whether it&apos;s a corporate event, car dealership video, or creative social media campaign, our clients trust us to deliver excellence every time.
-          </p>
         </div>
 
         {/* গুগল রেটিং সামারি (4.9 Stars - 114 Reviews) */}

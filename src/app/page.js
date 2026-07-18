@@ -1,20 +1,15 @@
 import AboutSection from "@/components/home/About";
 import ClientMarquee from "@/components/home/ClientMarquee";
 import ContactSection from "@/components/home/ContactSection";
-import DriveResults from "@/components/home/DriveResults";
-import FilmPackages from "@/components/home/FilmPackages";
 import HeroSection from "@/components/home/Hero";
-import KeyPoints from "@/components/home/KeyPoints";
-import MyGallery from "@/components/MyGallery";
+import MediaLogos from "@/components/home/MediaLogos";
 import ProcessSection from "@/components/home/ProcessSection";
 import RecentPostsSection from "@/components/home/RecentPost";
-import RestaurantAssociation from "@/components/home/RestaurantAssociation";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import SocialGallery from "@/components/home/SocialGallery";
 import StatsCounter from "@/components/home/StatsCounter";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import VideoGallery from "@/components/home/VideoGallery";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
 
 const OG_IMAGE =
   "https://finalcutmultimedia.com/wp-content/uploads/2025/11/2bd1fc48b0c646bc91d7c1a0450f56ac60767345-2001x1577-1.png";
@@ -170,16 +165,11 @@ export default function Home() {
 
       <main>
         <HeroSection />
+        <MediaLogos />
         <AboutSection />
         <VideoGallery />
-        <WhyChooseUs />
         <StatsCounter />
-        <KeyPoints />
-        <RestaurantAssociation />
         <ServicesGrid />
-        <MyGallery />
-        <FilmPackages />
-        <DriveResults />
         <TestimonialSection />
         <ProcessSection />
         <ClientMarquee />

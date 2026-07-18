@@ -20,27 +20,90 @@ export default function VideoGallery() {
 
   // ভিডিও ডেটাতে কাস্টম থাম্বনেইল
   const videos = [
-    { id: 1, title: "TMP 3D Printing Process", location: "CORPORATE VIDEO", url: "https://player.vimeo.com/video/1204810197?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/2173238621-32f318d3a88169d3caab849add7f6561f1476a6f36e5f852ab66ef0187a485db-d_1280?region=us" },
-    { id: 2, title: "Brand Film", location: "FILMED & EDITED BY FCM", url: "https://player.vimeo.com/video/1205871706?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/2174567149-c286532092fdcc0d43a037378f20a85986a975cc9e95eb2ee763ff5b53c2359b-d_1280?region=us" },
-    { id: 3, title: "Brand Story", location: "FILMED & EDITED BY FCM", url: "https://player.vimeo.com/video/1205946765?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/2174666848-fea743b70194887c218258ac8907dc9d7baefdc222f35a9783fdabb9d83d0a66-d_1280?region=us" },
-    { id: 4, title: "Hackathon Event", location: "EVENT COVERAGE", url: "https://player.vimeo.com/video/1206157382?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/2174928930-1e03a828aa96b9a3ab09c8c876cf7871d08525ad308b888c99bd73833f3455ba-d_1280?region=us" },
-    { id: 5, title: "John Amato", location: "AUTOMOTIVE", url: "https://player.vimeo.com/video/299709535?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/737888531-cd37140dedbcbae9737149e94a6c06b68ca42c944f17b815199130af799807ad-d_1280?region=us" },
-    { id: 6, title: "JR Amato", location: "AUTOMOTIVE", url: "https://player.vimeo.com/video/299709658?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/737888717-147ec96d2fff1d2b2a5bc2a43339cca2dbd5431c4ad50264c1f3f2748520ad83-d_1280?region=us" },
-    { id: 7, title: "Employment", location: "CORPORATE VIDEO", url: "https://player.vimeo.com/video/299711230?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/737890788-50e3069c1d1bb488205bdd8d66fb7dbd87778bb32630996b1a9c2f711a8bba44-d_1280?region=us" },
-    { id: 8, title: "John Amato Chrysler Dodge Jeep Ram Promo", location: "AUTOMOTIVE", url: "https://player.vimeo.com/video/299711587?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/2077007196-6e8418fa630a9951e02aaecaa25a07d1c565a5bd30495be5b127043cd0f8507a-d_1280?region=us" },
-    { id: 9, title: "Why Buy at Amato — The Amato Advantage", location: "AUTOMOTIVE", url: "https://player.vimeo.com/video/299713372?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/737893519-e65252f92fec4a72885dc7d090a6c4314e2583eb35fe8be812a5b693ecc122bf-d_1280?region=us" },
-    { id: 10, title: "Crown Auto — Meet the Owner", location: "AUTOMOTIVE", url: "https://player.vimeo.com/video/322030118?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/764877615-f98763d5c74eae055852df5961560f177a9c2802581732ee3a1889384d8227f8-d_1280?region=us" },
-    { id: 11, title: "Charlotte NC Raw & Uncut Commercial", location: "COMMERCIAL", url: "https://player.vimeo.com/video/347653169?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/798779624-d6c69f8634be0df57ce10d279c12e426e32180ebb77ace9c259ea376677e8158-d_1280?region=us" },
-    { id: 12, title: "Charlotte Raw & Uncut — 1st Show", location: "COMMERCIAL", url: "https://player.vimeo.com/video/347653197?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/798044448-f50ce72b6a0bca625b15248435e068e8f784964286ff90d6a0a6fa7ace584fe2-d_1280?region=us" },
-    { id: 13, title: "Matt", location: "TESTIMONIAL", url: "https://player.vimeo.com/video/390883821?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/855221693-97b63b3e1acea562b7e9b0b0cb981f81ed5878986accc3c57247b50dae544568-d_1280?region=us" },
-    { id: 14, title: "Paris", location: "TESTIMONIAL", url: "https://player.vimeo.com/video/391904507?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/856778522-334e848dfe76cba7f95a8a78751bbf9d4fd505cad978a7428c4ee6552a69d9ee-d_1280?region=us" },
-    { id: 15, title: "Cinematic Reel", location: "CINEMATIC", url: "https://player.vimeo.com/video/581678702?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/1203721993-2115c74fde5465fb002c6919762ea5b4d303f865e6ce1449ce1fb6cfc4f1c086-d_1280?region=us" },
-    { id: 16, title: "Testimonial Video", location: "TESTIMONIAL", url: "https://player.vimeo.com/video/659551134?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/1332160407-350b95ee5371d2612e1eeffb950960d88b375abaafdb07fc4e7f5193a6991f9f-d_1280?region=us" },
-    { id: 17, title: "PeriOp", location: "TRAINING VIDEO", url: "https://player.vimeo.com/video/670200023?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/1368122247-1c261761bdd9ac4be553febe3123b08fef41d852fd5623387e529956041dc36d-d_1280?region=us" },
-    { id: 18, title: "Ted Wilson Jr.", location: "TESTIMONIAL", url: "https://player.vimeo.com/video/694443460?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/1405000745-e4947d60f8e624006363d77b91295e6667d78541073f2c87111b054ec7d5160b-d_1280?region=us" },
-    { id: 19, title: "Race Day at Sam's Club 2022", location: "EVENT COVERAGE", url: "https://player.vimeo.com/video/729037812?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/1468462692-c172085ef7daf062eaa328e5b41065be114d2c6278fdaf79a7c2e28d04000c45-d_1280?region=us" },
-    { id: 20, title: "Final Draft", location: "CINEMATIC", url: "https://player.vimeo.com/video/752557257?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/1512541404-ae707720f7bf9325ee620a04cdec919ca45606381235704514838bcc7ba3fe66-d_1280?region=us" },
-    { id: 21, title: "2024 Fair Lending Forum", location: "EVENT COVERAGE", url: "https://player.vimeo.com/video/984427815?title=0&byline=0&portrait=0", thumbnail: "https://i.vimeocdn.com/video/1899872758-31b0f62ca7516771ca8cd125bb134c33be663d6062becdabfc767a98b864657c-d_1280?region=us" },
+    { 
+      id: 1, 
+      title: "BRAND COMMERCIAL",
+      location: "VIDEO PRODUCTION",
+      url: "https://player.vimeo.com/video/659551134?h=981ca1e9a1",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2026/06/social-media-profile-management-1024x585.jpeg"
+    },
+    { 
+      id: 2, 
+      title: "CLIENT TESTIMONIALS",
+      location: "BUSINESS STORYTELLING",
+      url: "https://player.vimeo.com/video/817227760?h=ed3ad73e11",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/professional-video-production-for-car-dealers-1-768x439-1.jpeg"
+    },
+    { 
+      id: 3, 
+      title: "EVENT HIGHLIGHTS", 
+      location: "EVENT COVERAGE",
+      url: "https://player.vimeo.com/video/1018999440?h=49e7fc2c6b",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/a8b00388-72df-4154-ac5b-e469b6968b84.jpeg"
+    },
+    { 
+      id: 4, 
+      title: "MONTHLY CONTENT CREATION",
+      location: "RECURRING CONTENT",
+      url: "https://player.vimeo.com/video/729037812?h=43160bdfed",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/Mac-Two-Computers-Display.jpg"
+    },
+    { 
+      id: 5, 
+      title: "TRAINING VIDEOS",
+      location: "INTERNAL COMMUNICATION",
+      url: "https://player.vimeo.com/video/984427815?h=e0a2925dac",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/87d2047b-a769-426a-8539-3d0b3f8f7a01-scaled.jpeg"
+    },
+    { 
+      id: 6, 
+      title: "CORPORATE INTERVIEWS",
+      location: "CORPORATE VIDEO",
+      url: "https://player.vimeo.com/video/299711587?h=5e1c36a214",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/E8D4179E-7B88-4704-900F-A1D83B47BC86-scaled.jpeg"
+    },
+    { 
+      id: 7, 
+      title: "AUTOMOTIVE PROMO", 
+      location: "ATLANTA", 
+      url: "https://player.vimeo.com/video/299713372?h=3197039fa5",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/openart-image_t8vy9ESm_1760035589171_raw.jpg"
+    },
+    { 
+      id: 8, 
+      title: "LIVE STREAM EVENT", 
+      location: "BOSTON", 
+      url: "https://player.vimeo.com/video/694443460?h=f04d700711",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/IMG_2841-scaled.jpeg"
+    },
+    { 
+      id: 9, 
+      title: "SOCIAL MEDIA AD", 
+      location: "SEATTLE", 
+      url: "https://player.vimeo.com/video/670200023?h=d2d14f91a1",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2026/06/social-media-content-for-real-estate-companies-1024x585.jpeg"
+    },
+    { 
+      id: 10, 
+      title: "TRAINING VIDEO", 
+      location: "DENVER", 
+      url: "https://player.vimeo.com/video/752557257?h=f930cb6852",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/IMG_0540-scaled.jpeg"
+    },
+    { 
+      id: 11, 
+      title: "INTERVIEW SESSION", 
+      location: "AUSTIN", 
+      url: "https://player.vimeo.com/video/347653169?h=62ae825ca0",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/496857656_2510228855980777_2259413147144370187_n.jpg"
+    },
+    { 
+      id: 12, 
+      title: "PRODUCT LAUNCH", 
+      location: "DALLAS", 
+      url: "https://player.vimeo.com/video/322030118?h=1243cbc3be",
+      thumbnail: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/Untitled-3.jpg"
+    },
   ];
 
   return (
@@ -89,7 +152,7 @@ export default function VideoGallery() {
           ref={scrollContainerRef}
           className="grid grid-rows-1 md:grid-rows-2 grid-flow-col auto-cols-[85vw] md:auto-cols-[40vw] lg:auto-cols-[32vw] gap-[4vw] md:gap-[2vw] px-5 pb-[2vh] overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth"
         >
-          {videos.map((video) => (
+          {videos.slice(0, 6).map((video) => (
             <div 
               key={video.id} 
               className="relative w-full h-[35vh] md:h-[35vh] group cursor-pointer overflow-hidden bg-black snap-center flex-shrink-0"

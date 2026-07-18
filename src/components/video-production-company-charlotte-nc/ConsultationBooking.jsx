@@ -153,7 +153,7 @@ Timezone: ${selectedTimezone.label}`);
   return (
     <section className="font-['Segoe_UI',Arial,sans-serif] bg-[#0a0a0a] text-white py-[8vh] px-5">
       {/* Top Banner */}
-      <div className="max-w-[85vw] mx-auto bg-[#111] text-center py-[6vh] px-5 border border-white/10 border-b-2 border-b-[#cc0000] rounded-t-xl">
+      <div className="max-w-[85vw] mx-auto bg-[#111] text-center py-[6vh] px-5 border border-white/10 border-b-2 border-b-[#DB0909] rounded-t-xl">
         <h1 className="text-[clamp(18px,3vmin,28px)] font-black tracking-[0.05em] text-white mb-3 uppercase">
           REQUEST A VIDEO PRODUCTION CONSULTATION
         </h1>
@@ -161,7 +161,7 @@ Timezone: ${selectedTimezone.label}`);
           If you&apos;re planning a video project and want professional guidance, we&apos;re here to help you explore the best approach.
         </p>
         <button
-          className="bg-transparent border-2 border-[#cc0000] text-white py-2.5 px-7 text-[13px] font-bold tracking-[0.08em] cursor-pointer uppercase transition-colors duration-200 hover:bg-[#cc0000]/10"
+          className="bg-transparent border-2 border-[#DB0909] text-white py-2.5 px-7 text-[13px] font-bold tracking-[0.08em] cursor-pointer uppercase transition-colors duration-200 hover:bg-[#DB0909]/10"
           onClick={() => document.getElementById("booking-widget").scrollIntoView({ behavior: "smooth" })}
         >
           REQUEST A CONSULTATION
@@ -172,7 +172,7 @@ Timezone: ${selectedTimezone.label}`);
       <div className="max-w-[85vw] mx-auto bg-[#1a1a1a] border-x border-b border-white/10 py-3 px-6 flex items-center gap-2 text-[13px] text-[#ccc]">
         <span className="text-base">🕐</span>
         <span className="font-semibold text-white">{currentTimeString}</span>
-        <span className="text-[#cc0000] font-medium"> — {selectedTimezone.label}</span>
+        <span className="text-[#DB0909] font-medium"> — {selectedTimezone.label}</span>
       </div>
 
       {/* Booking Widget */}
@@ -180,14 +180,14 @@ Timezone: ${selectedTimezone.label}`);
         {/* Tabs */}
         <div className="flex border-b-2 border-[#eee]">
           <button
-            className={`flex-1 p-4 bg-none border-none text-[15px] font-semibold cursor-pointer border-b-[3px] transition-all duration-200 ${activeTab === "availability" ? "text-[#cc0000] border-b-[#cc0000]" : "text-[#555] border-b-transparent"
+            className={`flex-1 p-4 bg-none border-none text-[15px] font-semibold cursor-pointer border-b-[3px] transition-all duration-200 ${activeTab === "availability" ? "text-[#DB0909] border-b-[#DB0909]" : "text-[#555] border-b-transparent"
               }`}
             onClick={() => setActiveTab("availability")}
           >
             Availability
           </button>
           <button
-            className={`flex-1 p-4 bg-none border-none text-[15px] font-semibold cursor-pointer border-b-[3px] transition-all duration-200 ${activeTab === "form" ? "text-[#cc0000] border-b-[#cc0000]" : "text-[#555] border-b-transparent"
+            className={`flex-1 p-4 bg-none border-none text-[15px] font-semibold cursor-pointer border-b-[3px] transition-all duration-200 ${activeTab === "form" ? "text-[#DB0909] border-b-[#DB0909]" : "text-[#555] border-b-transparent"
               }`}
             onClick={() => setActiveTab("form")}
           >
@@ -201,7 +201,7 @@ Timezone: ${selectedTimezone.label}`);
             {/* Left: Calendar */}
             <div className="w-full lg:w-[55%] py-8 px-6 md:px-8 border-b lg:border-b-0 lg:border-r border-[#eee]">
               <h2 className="text-[20px] font-extrabold text-[#111] mb-1">Book a Zoom Meeting</h2>
-              <p className="text-[#cc0000] font-bold text-sm mb-1">Final Cut Multimedia</p>
+              <p className="text-[#DB0909] font-bold text-sm mb-1">Final Cut Multimedia</p>
               <p className="text-xs text-[#888] mb-4">⏱ Appointment Duration: 15 minutes</p>
 
               {/* Timezone selector */}
@@ -214,7 +214,7 @@ Timezone: ${selectedTimezone.label}`);
                     {TIMEZONES.map((tz) => (
                       <div
                         key={tz.value}
-                        className={`py-2.5 px-3.5 text-[13px] cursor-pointer text-[#333] transition-colors duration-150 hover:bg-gray-100 ${tz.value === selectedTimezone.value ? "bg-[#fff0f0] text-[#cc0000] font-bold" : ""
+                        className={`py-2.5 px-3.5 text-[13px] cursor-pointer text-[#333] transition-colors duration-150 hover:bg-gray-100 ${tz.value === selectedTimezone.value ? "bg-[#fff0f0] text-[#DB0909] font-bold" : ""
                           }`}
                         onClick={() => { setSelectedTimezone(tz); setShowTzDropdown(false); }}
                       >
@@ -255,7 +255,7 @@ Timezone: ${selectedTimezone.label}`);
                   return (
                     <div
                       key={day}
-                      className={`text-center py-2 px-1 rounded-full text-[13px] cursor-pointer font-medium transition-all duration-150 select-none ${past ? "text-[#ccc] cursor-not-allowed" : isSelected ? "bg-[#cc0000] text-white font-bold" : "text-[#111] font-bold hover:bg-gray-100"
+                      className={`text-center py-2 px-1 rounded-full text-[13px] cursor-pointer font-medium transition-all duration-150 select-none ${past ? "text-[#ccc] cursor-not-allowed" : isSelected ? "bg-[#DB0909] text-white font-bold" : "text-[#111] font-bold hover:bg-gray-100"
                         }`}
                       onClick={() => handleDayClick(day)}
                     >
@@ -277,7 +277,7 @@ Timezone: ${selectedTimezone.label}`);
                   {HOURS.map((h) => (
                     <button
                       key={h}
-                      className={`bg-white border-[1.5px] border-[#ddd] rounded-[4px] py-[9px] px-2 text-[13px] font-semibold cursor-pointer text-[#333] transition-all duration-150 text-center ${selectedTime === h ? "bg-[#cc0000] border-[#cc0000] text-white" : "hover:border-[#cc0000]"
+                      className={`bg-white border-[1.5px] border-[#ddd] rounded-[4px] py-[9px] px-2 text-[13px] font-semibold cursor-pointer text-[#333] transition-all duration-150 text-center ${selectedTime === h ? "bg-[#DB0909] border-[#DB0909] text-white" : "hover:border-[#DB0909]"
                         }`}
                       onClick={() => setSelectedTime(h)}
                     >
@@ -286,7 +286,7 @@ Timezone: ${selectedTimezone.label}`);
                   ))}
                 </div>
                 <button
-                  className={`border-none rounded-[4px] py-3 px-2 font-bold text-[13px] tracking-wide ${!selectedTime ? "bg-[#e8b4b4] cursor-not-allowed text-white" : "bg-[#cc0000] text-white cursor-pointer"
+                  className={`border-none rounded-[4px] py-3 px-2 font-bold text-[13px] tracking-wide ${!selectedTime ? "bg-[#e8b4b4] cursor-not-allowed text-white" : "bg-[#DB0909] text-white cursor-pointer"
                     }`}
                   onClick={handleSubmitNext}
                 >
@@ -325,7 +325,7 @@ Timezone: ${selectedTimezone.label}`);
 
             {/* Selected slot summary */}
             {selectedDay && selectedTime && (
-              <div className="bg-[#fff8f8] border border-[#f5c6c6] rounded-md py-2.5 px-4 text-[13px] text-[#cc0000] font-semibold mb-5 text-center">
+              <div className="bg-[#fff8f8] border border-[#f5c6c6] rounded-md py-2.5 px-4 text-[13px] text-[#DB0909] font-semibold mb-5 text-center">
                 📅 {fullDateStr} &nbsp;|&nbsp; ⏰ {selectedTime} &nbsp;|&nbsp; 🌐 {selectedTimezone.label}
               </div>
             )}
@@ -334,70 +334,70 @@ Timezone: ${selectedTimezone.label}`);
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-bold text-[#333] tracking-wide">Company Name*</label>
                 <input
-                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.company ? "border-[#cc0000] bg-[#fff8f8]" : "focus:border-gray-400"
+                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.company ? "border-[#DB0909] bg-[#fff8f8]" : "focus:border-gray-400"
                     }`}
                   value={form.company} onChange={handleInput("company")} placeholder="Your Company"
                 />
-                {errors.company && <span className="text-[11px] text-[#cc0000] font-semibold">{errors.company}</span>}
+                {errors.company && <span className="text-[11px] text-[#DB0909] font-semibold">{errors.company}</span>}
               </div>
 
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-bold text-[#333] tracking-wide">Your First Name*</label>
                 <input
-                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.firstName ? "border-[#cc0000] bg-[#fff8f8]" : "focus:border-gray-400"
+                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.firstName ? "border-[#DB0909] bg-[#fff8f8]" : "focus:border-gray-400"
                     }`}
                   value={form.firstName} onChange={handleInput("firstName")} placeholder="First Name"
                 />
-                {errors.firstName && <span className="text-[11px] text-[#cc0000] font-semibold">{errors.firstName}</span>}
+                {errors.firstName && <span className="text-[11px] text-[#DB0909] font-semibold">{errors.firstName}</span>}
               </div>
 
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-bold text-[#333] tracking-wide">Your Last Name*</label>
                 <input
-                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.lastName ? "border-[#cc0000] bg-[#fff8f8]" : "focus:border-gray-400"
+                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.lastName ? "border-[#DB0909] bg-[#fff8f8]" : "focus:border-gray-400"
                     }`}
                   value={form.lastName} onChange={handleInput("lastName")} placeholder="Last Name"
                 />
-                {errors.lastName && <span className="text-[11px] text-[#cc0000] font-semibold">{errors.lastName}</span>}
+                {errors.lastName && <span className="text-[11px] text-[#DB0909] font-semibold">{errors.lastName}</span>}
               </div>
 
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-bold text-[#333] tracking-wide">Phone*</label>
                 <input
-                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.phone ? "border-[#cc0000] bg-[#fff8f8]" : "focus:border-gray-400"
+                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.phone ? "border-[#DB0909] bg-[#fff8f8]" : "focus:border-gray-400"
                     }`}
                   value={form.phone} onChange={handleInput("phone")} placeholder="+1 234 567 890" type="tel"
                 />
-                {errors.phone && <span className="text-[11px] text-[#cc0000] font-semibold">{errors.phone}</span>}
+                {errors.phone && <span className="text-[11px] text-[#DB0909] font-semibold">{errors.phone}</span>}
               </div>
 
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-bold text-[#333] tracking-wide">Email*</label>
                 <input
-                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.email ? "border-[#cc0000] bg-[#fff8f8]" : "focus:border-gray-400"
+                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit ${errors.email ? "border-[#DB0909] bg-[#fff8f8]" : "focus:border-gray-400"
                     }`}
                   value={form.email} onChange={handleInput("email")} placeholder="you@email.com" type="email"
                 />
-                {errors.email && <span className="text-[11px] text-[#cc0000] font-semibold">{errors.email}</span>}
+                {errors.email && <span className="text-[11px] text-[#DB0909] font-semibold">{errors.email}</span>}
               </div>
 
               <div className="flex flex-col gap-1 col-span-1 md:col-span-2">
                 <label className="text-xs font-bold text-[#333] tracking-wide">Tell us a little about this project:*</label>
                 <textarea
-                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit resize-y min-h-[90px] ${errors.projectDetails ? "border-[#cc0000] bg-[#fff8f8]" : "focus:border-gray-400"
+                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit resize-y min-h-[90px] ${errors.projectDetails ? "border-[#DB0909] bg-[#fff8f8]" : "focus:border-gray-400"
                     }`}
                   value={form.projectDetails}
                   onChange={handleInput("projectDetails")}
                   placeholder="Describe your video project..."
                   rows={4}
                 />
-                {errors.projectDetails && <span className="text-[11px] text-[#cc0000] font-semibold">{errors.projectDetails}</span>}
+                {errors.projectDetails && <span className="text-[11px] text-[#DB0909] font-semibold">{errors.projectDetails}</span>}
               </div>
 
               <div className="flex flex-col gap-1 col-span-1 md:col-span-2">
                 <label className="text-xs font-bold text-[#333] tracking-wide">How did you hear about us?*</label>
                 <select
-                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit appearance-auto cursor-pointer ${errors.howHeard ? "border-[#cc0000] bg-[#fff8f8]" : "focus:border-gray-400"
+                  className={`border-[1.5px] border-[#ddd] rounded-[4px] py-2.5 px-3 text-[13px] text-[#111] bg-[#fafafa] outline-none transition-colors duration-150 font-inherit appearance-auto cursor-pointer ${errors.howHeard ? "border-[#DB0909] bg-[#fff8f8]" : "focus:border-gray-400"
                     }`}
                   value={form.howHeard}
                   onChange={handleInput("howHeard")}
@@ -405,7 +405,7 @@ Timezone: ${selectedTimezone.label}`);
                   <option value="">Select</option>
                   {HOW_DID_YOU_HEAR.map((o) => <option key={o} value={o}>{o}</option>)}
                 </select>
-                {errors.howHeard && <span className="text-[11px] text-[#cc0000] font-semibold">{errors.howHeard}</span>}
+                {errors.howHeard && <span className="text-[11px] text-[#DB0909] font-semibold">{errors.howHeard}</span>}
               </div>
             </div>
 
@@ -413,7 +413,7 @@ Timezone: ${selectedTimezone.label}`);
               <button className="bg-none border-[1.5px] border-[#ddd] py-2.5 px-5 rounded-[4px] font-bold text-[13px] cursor-pointer text-[#555] hover:bg-gray-50" onClick={() => setActiveTab("availability")}>
                 &larr; Back
               </button>
-              <button className="bg-[#cc0000] text-white border-none rounded-[4px] py-3 px-8 font-extrabold text-sm tracking-[0.12em] cursor-pointer uppercase hover:bg-[#b30000]" onClick={handleBookMeeting}>
+              <button className="bg-[#DB0909] text-white border-none rounded-[4px] py-3 px-8 font-extrabold text-sm tracking-[0.12em] cursor-pointer uppercase hover:bg-[#b80707]" onClick={handleBookMeeting}>
                 BOOK MEETING
               </button>
             </div>

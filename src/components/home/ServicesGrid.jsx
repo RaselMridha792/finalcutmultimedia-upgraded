@@ -4,13 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ServicesGrid() {
-  // লাইভ সাইটের হুবহু সার্ভিস কার্ড ডেসক্রিপশন
   const services = [
     {
       id: 1,
       subtitle: "PROFESSIONAL",
       title: "VIDEO PRODUCTION",
-      desc: "High-quality video storytelling crafted to engage your audience and showcase your brand with professionalism.",
+      desc: "Commercials, interviews, brand stories, promotional videos.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/11/pbokepuiqgmlaczczfmx1.jpg",
       link: "/video-production-company-in-charlotte-nc",
     },
@@ -18,7 +17,7 @@ export default function ServicesGrid() {
       id: 2,
       subtitle: "CREATIVE",
       title: "PHOTOGRAPHY",
-      desc: "Creative and detailed photography for events, products, and portraits, capturing moments that last a lifetime.",
+      desc: "Corporate headshots, event coverage, product photography, lifestyle.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/ebe708e3-7864-45f8-b7c6-4efaec1b19371.jpg",
       link: "/photography-services-charlotte-nc",
     },
@@ -26,54 +25,30 @@ export default function ServicesGrid() {
       id: 3,
       subtitle: "CINEMATIC",
       title: "VIDEO EDITING",
-      desc: "Transform raw footage into polished productions with seamless cuts, sound design, and cinematic finishing.",
+      desc: "Post-production, color grading, sound design, visual effects.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/Mac-Two-Computers-Display.jpg",
       link: "/video-editing-in-charlotte-nc",
     },
     {
       id: 4,
-      subtitle: "PROFESSIONAL",
-      title: "CORPORATE EVENTS",
-      desc: "Professional coverage of conferences, seminars, and business gatherings, presenting your company at its best.",
-      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/IMG_2841-scaled.jpeg",
-      link: "/event-photography-charlotte-nc",
-    },
-    {
-      id: 5,
-      subtitle: "AUTOMOTIVE",
-      title: "CAR DEALERSHIP VIDEOS",
-      desc: "Engaging automotive videos designed to highlight your inventory, promotions, and attract more buyers.",
-      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/professional-video-production-for-car-dealers-1-768x439-1.jpeg",
-      link: "/video-production-company-in-charlotte-nc",
-    },
-    {
-      id: 6,
       subtitle: "DYNAMIC",
       title: "CONTENT FOR SOCIAL MEDIA",
-      desc: "Short-form, platform-optimized content built to capture attention, promotions and boost online engagement.",
+      desc: "A consistent library of professional content for web, social, and campaigns.",
       image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/1000_F_85861337_0ZeiHG0IC2vPZrQd26KT9SDj4LU9O4fF-1.webp",
       link: "/content-for-social-media",
     },
     {
-      id: 7,
+      id: 5,
       subtitle: "MEMORABLE",
-      title: "EVENT PHOTOGRAPHY & VIDEO COVERAGE",
-      desc: "From corporate events and conferences to product launches and company gatherings, we capture everything.",
-      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/a8b00388-72df-4154-ac5b-e469b6968b84.jpeg",
+      title: "EVENT COVERAGE",
+      desc: "High-quality video and photo coverage for corporate events, conferences, and live shows.",
+      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/IMG_2841-scaled.jpeg",
       link: "/event-photography-charlotte-nc",
-    },
-    {
-      id: 8,
-      subtitle: "INSTRUCTIONAL",
-      title: "SAFETY & TRAINING VIDEOS",
-      desc: "Clear, instructional productions that simplify learning and promote workplace safety and compliance.",
-      image: "https://finalcutmultimedia.com/wp-content/uploads/2025/10/87d2047b-a769-426a-8539-3d0b3f8f7a01-scaled.jpeg",
-      link: "/additional-production-services",
     },
   ];
 
   const industries = [
-    "Automotive", "Corporate", "Healthcare", "Education", "Entertainment", "E-commerce", "Hospitality"
+    "Real Estate", "Automotive", "Corporate", "Healthcare", "Education", "Entertainment", "E-commerce", "Hospitality"
   ];
 
   const areas = [
@@ -98,9 +73,6 @@ export default function ServicesGrid() {
           <h2 className="text-white text-[7vw] md:text-[3vw] font-bold uppercase leading-tight">
             Tailored Multimedia Solutions To Bring Your Vision To Life
           </h2>
-          <p className="text-gray-400 text-[3.5vw] md:text-[1vw] leading-relaxed mt-[2.5vh]">
-            Final Cut Multimedia is Charlotte&apos;s leading video production and photography company, crafting cinematic visuals that help businesses capture attention, build trust, and grow their brand.
-          </p>
         </div>
         
         <div className="w-full md:w-1/2 flex md:justify-end">
@@ -118,11 +90,13 @@ export default function ServicesGrid() {
 
       {/* Responsive two-column service grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[2vh] md:gap-[1.5vw]">
-        {services.map((item) => (
-          <Link 
-            href={item.link} 
-            key={item.id} 
-            className="relative block h-[40vh] w-full overflow-hidden bg-black group md:h-[50vh]"
+        {services.map((item, index) => (
+          <Link
+            href={item.link}
+            key={item.id}
+            className={`relative block h-[40vh] w-full overflow-hidden bg-black group md:h-[50vh] ${
+              services.length % 2 === 1 && index === services.length - 1 ? "md:col-span-2" : ""
+            }`}
           >
             {/* ব্যাকগ্রাউন্ড ইমেজ */}
             <Image

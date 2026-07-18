@@ -63,13 +63,13 @@ export default function ClientAndVlogSection() {
       id: 2,
       title: "BRENTWOOD EXCLUSIVE TOUR",
       embedId: "TehKGf4gX94",
-      thumbnail: "https://img.youtube.com/vi/TehKGf4gX94/maxresdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/TehKGf4gX94/hqdefault.jpg",
     },
     {
       id: 3,
       title: "PREMIUM CINEMATIC PRODUCTION",
       embedId: "dDv0YyVOpeI",
-      thumbnail: "https://img.youtube.com/vi/dDv0YyVOpeI/maxresdefault.jpg",
+      thumbnail: "https://img.youtube.com/vi/dDv0YyVOpeI/hqdefault.jpg",
     },
     {
       id: 4,
@@ -98,37 +98,7 @@ export default function ClientAndVlogSection() {
       {/* Main content container */}
       <div className="relative z-10 w-full flex flex-col">
         
-        {/* 1. Sliding partner logo section (Marquee) */}
-        <div className="client-logo-marquee relative flex w-full items-center overflow-hidden border-b border-gray-100 py-7 sm:py-9">
-          <div className="client-logo-track flex w-max">
-            {[false, true].map((isDuplicate) => (
-              <div
-                key={isDuplicate ? "duplicate" : "primary"}
-                className="client-logo-group flex shrink-0 items-center"
-                aria-hidden={isDuplicate}
-              >
-                {clientLogos.map((logo, index) => (
-                  <div
-                    key={`${isDuplicate ? "duplicate" : "primary"}-${index}`}
-                    className="client-logo-card group relative flex shrink-0 items-center justify-center overflow-hidden rounded-sm border border-black/[0.06] bg-white shadow-[0_8px_28px_rgba(0,0,0,0.05)]"
-                  >
-                    <Image
-                      src={logo}
-                      alt={isDuplicate ? "" : `Client Logo ${index + 1}`}
-                      fill
-                      sizes="(max-width: 640px) 144px, (max-width: 1024px) 176px, 208px"
-                      className="object-contain p-3 grayscale opacity-65 transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100"
-                      unoptimized
-                      draggable={false}
-                    />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 2. YouTube channel promotion bar */}
+        {/* YouTube channel promotion bar (client-logo marquee removed — media-logo strip now lives after the hero) */}
         <div className="w-full py-12 px-6 sm:px-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
           <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
             <span className="text-gray-400 text-xs sm:text-sm md:text-base tracking-[0.15em] uppercase font-bold block">

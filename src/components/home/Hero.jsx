@@ -29,13 +29,13 @@ export default function HeroSection() {
         
         {/* মেইন টাইটেল (ক্লায়েন্টের নতুন টেক্সট) */}
         <h1 className="text-white font-black tracking-tight mb-[3vh] text-[8vw] md:text-[4vw] leading-[1.1] drop-shadow-lg">
-          The Most Trusted Video Production Company <br className="hidden md:block" />
-          in Charlotte, NC — <span className="text-red-600">We Turn Vision Into Cinematic Reality</span>
+          Professional Video Production <br className="hidden md:block" />
+          That Helps Your Business <span className="text-red-600">Stand Out</span>
         </h1>
 
         {/* সাব-হেডলাইন */}
         <p className="text-gray-300 font-medium mb-[6vh] text-[4vw] md:text-[1.2vw] max-w-[90vw] md:max-w-[60vw] leading-relaxed drop-shadow-md">
-          Drone service from one of our certified licensed pilots when you book with us — because every project deserves a cinematic view from above. Corporate video production, event videography &amp; photography for businesses across North Carolina, with film packages as low as $599.
+          We craft cinematic visuals and compelling stories that capture attention, build trust, and drive real results for your brand.
         </p>
 
         {/* বাটন গ্রুপ */}
