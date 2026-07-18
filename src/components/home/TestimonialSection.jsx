@@ -8,23 +8,23 @@ export default function TestimonialSection() {
   const reviews = [
     {
       id: 1,
-      name: "Kelly King",
-      time: "1 month ago",
-      text: "Final Cut Multimedia went above and beyond for our project. The team was highly professional, easy to work with, and the final video was absolutely stunning. Highly recommend their services!",
+      name: "Brandon Miller",
+      time: "Business Owner",
+      text: "Final Cut Multimedia completely transformed the way we showcase our business. Their video production and editing team created stunning visuals that captured our brand perfectly. Professional, creative, and always on time!",
       rating: 5,
     },
     {
       id: 2,
-      name: "Marcus Davis",
-      time: "3 months ago",
-      text: "Absolutely amazing experience. They handled our corporate event perfectly and delivered a high-quality promotional video that our whole team loved. Promptness and picture quality were top-notch.",
+      name: "David R",
+      time: "Event Manager",
+      text: "We hired Final Cut Multimedia for our corporate event coverage, and the results were beyond expectations. The photography and video highlight reel were polished and truly memorable. They made the whole process stress-free.",
       rating: 5,
     },
     {
       id: 3,
-      name: "Sarah Powell",
-      time: "4 months ago",
-      text: "The drone footage they captured for our real estate listing was breathtaking. They are very prompt, professional, and true experts in their craft. They truly brought our vision to life.",
+      name: "Emily Johnson",
+      time: "Marketing Director",
+      text: "The car dealership video and social media content they produced for us boosted engagement instantly. Their attention to detail and storytelling style is unmatched. Highly recommended for any business wanting to stand out online.",
       rating: 5,
     },
   ];
