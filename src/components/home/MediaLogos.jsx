@@ -1,5 +1,6 @@
 // Client / partner brand logos shown in the strip right after the hero.
-// Self-hosted in /public/media-logos, on a white background so they stand out.
+// Each logo sits in a uniform (same-size) white card so different logo
+// dimensions read consistently. Self-hosted in /public/media-logos.
 
 const CLIENT_LOGOS = [
   { src: "/media-logos/nissan.png", alt: "Nissan" },
@@ -15,7 +16,7 @@ const CLIENT_LOGOS = [
   { src: "/media-logos/restaurant-association.png", alt: "Restaurant Association" },
   { src: "/media-logos/nammba.png", alt: "NAMMBA" },
   { src: "/media-logos/igm-resins.png", alt: "IGM Resins" },
-  { src: "/media-logos/ipc.png", alt: "IPC" },
+  { src: "/media-logos/ipc.png", alt: "Independent Pharmacy Cooperative" },
   { src: "/media-logos/keystone.png", alt: "Keystone" },
   { src: "/media-logos/offsitek.png", alt: "OffSiteK" },
   { src: "/media-logos/flf.png", alt: "FLF" },
@@ -33,22 +34,28 @@ export default function MediaLogos() {
   const track = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
   return (
-    <section className="w-full overflow-hidden border-y border-black/10 bg-white py-10 sm:py-12">
-      <p className="mb-8 text-center text-[10px] font-semibold uppercase tracking-[0.35em] text-black/45 sm:text-xs">
-        Trusted By
-      </p>
+    <section className="w-full overflow-hidden bg-white py-12 sm:py-14">
+      <div className="mb-10 flex items-center justify-center gap-4">
+        <span className="h-[3px] w-8 rounded-full bg-red-600" />
+        <p className="text-center text-sm font-bold uppercase tracking-[0.2em] text-black/80 sm:text-base">
+          Trusted By Industry Leaders
+        </p>
+        <span className="h-[3px] w-8 rounded-full bg-red-600" />
+      </div>
 
-      <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,#fff_8%,#fff_92%,transparent)]">
-        <ul className="flex w-max shrink-0 animate-[fcm-logo-marquee_60s_linear_infinite] items-center gap-10 pr-10 sm:gap-16 sm:pr-16">
+      <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,#fff_5%,#fff_95%,transparent)]">
+        <ul className="flex w-max shrink-0 animate-[fcm-logo-marquee_60s_linear_infinite] items-center gap-5 pr-5 sm:gap-6 sm:pr-6">
           {track.map((logo, i) => (
-            <li key={`${logo.alt}-${i}`} className="flex shrink-0 items-center">
-              <img
-                src={logo.src}
-                alt={i < CLIENT_LOGOS.length ? logo.alt : ""}
-                aria-hidden={i >= CLIENT_LOGOS.length}
-                loading="lazy"
-                className="h-10 w-auto max-w-[170px] object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0 sm:h-14 sm:max-w-[200px] lg:h-16"
-              />
+            <li key={`${logo.alt}-${i}`} className="shrink-0">
+              <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-black/[0.06] bg-white p-5 shadow-[0_6px_22px_rgba(0,0,0,0.07)] sm:h-28 sm:w-48">
+                <img
+                  src={logo.src}
+                  alt={i < CLIENT_LOGOS.length ? logo.alt : ""}
+                  aria-hidden={i >= CLIENT_LOGOS.length}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
             </li>
           ))}
         </ul>
