@@ -33,7 +33,7 @@ export default function MediaLogos() {
                 alt={i < MEDIA_LOGOS.length ? logo.alt : ""}
                 aria-hidden={i >= MEDIA_LOGOS.length}
                 loading="lazy"
-                className="h-9 w-auto max-w-[200px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 sm:h-12 lg:h-14"
+                className="h-12 w-auto max-w-[280px] object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 sm:h-16 lg:h-20"
               />
             </li>
           ))}

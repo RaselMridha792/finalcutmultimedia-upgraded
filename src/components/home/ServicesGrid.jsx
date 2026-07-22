@@ -54,13 +54,13 @@ export default function ServicesGrid() {
   ];
 
   const areas = [
-    "Charlotte, NC",
-    "Gastonia, NC",
-    "Kannapolis, NC",
-    "Concord, NC",
-    "Huntersville, NC",
-    "Mooresville, NC",
-    "Rock Hill, SC",
+    { name: "Charlotte, NC", url: "/video-production-charlotte" },
+    { name: "Gastonia, NC", url: "/video-production-gastonia" },
+    { name: "Kannapolis, NC", url: "/video-production-kannapolis" },
+    { name: "Concord, NC", url: "/video-production-concord" },
+    { name: "Huntersville, NC", url: "/video-production-huntersville-nc" },
+    { name: "Mooresville, NC", url: "/video-production-mooresville-nc" },
+    { name: "Rock Hill, SC", url: "/video-production-rock-hill-nc" },
   ];
 
   return (
@@ -181,12 +181,13 @@ export default function ServicesGrid() {
 
         <div className="flex flex-wrap justify-center gap-[3vw] md:gap-[1.5vw] w-full max-w-none">
           {areas.map((area, index) => (
-            <div
+            <Link
               key={index}
-              className="border border-white/20 px-[5vw] py-[1.5vh] md:px-[2.5vw] md:py-[1vh] rounded-full text-gray-300 text-[3vw] md:text-[0.85vw] uppercase tracking-wider hover:border-red-600 hover:text-white hover:bg-red-600/10 transition-colors cursor-default"
+              href={area.url}
+              className="border border-white/20 px-[5vw] py-[1.5vh] md:px-[2.5vw] md:py-[1vh] rounded-full text-gray-300 text-[3vw] md:text-[0.85vw] uppercase tracking-wider hover:border-red-600 hover:text-white hover:bg-red-600/10 transition-colors"
             >
-              {area}
-            </div>
+              {area.name}
+            </Link>
           ))}
         </div>
       </div>
