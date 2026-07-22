@@ -44,7 +44,7 @@ export default function MediaLogos() {
       </div>
 
       <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,#fff_5%,#fff_95%,transparent)]">
-        <ul className="flex w-max shrink-0 animate-[fcm-logo-marquee_60s_linear_infinite] items-center gap-5 pr-5 sm:gap-6 sm:pr-6">
+        <ul className="flex w-max shrink-0 animate-[fcm-logo-marquee_60s_linear_infinite] items-center gap-12 pr-12 sm:gap-16 sm:pr-16">
           {track.map((logo, i) => (
             <li key={`${logo.alt}-${i}`} className="shrink-0">
               <div className="flex h-24 w-40 items-center justify-center rounded-lg border border-black/[0.06] bg-white p-5 shadow-[0_6px_22px_rgba(0,0,0,0.07)] sm:h-28 sm:w-48">
