@@ -13,59 +13,6 @@ export default function Footer() {
     { name: "FAQ'S", url: "/faqs" },
   ];
 
-  // মেনুতে না থাকা সার্ভিস পেজগুলো ক্যাটাগরি অনুযায়ী (৪ কলামে ভরে যায়)
-  const serviceCategories = [
-    {
-      heading: "Video Production",
-      items: [
-        { name: "Video Production", url: "/video-production" },
-        { name: "Video Production Company", url: "/video-production-company-in-charlotte-nc" },
-        { name: "Corporate Video Production", url: "/corporate-video-production" },
-        { name: "Video Agency in Charlotte", url: "/video-agency-in-charlotte-nc" },
-      ],
-    },
-    {
-      heading: "Editing & Content",
-      items: [
-        { name: "Video Editing", url: "/video-editing-in-charlotte-nc" },
-        { name: "Documentary Video Production", url: "/documentary-video-production" },
-        { name: "Content for Social Media", url: "/content-for-social-media" },
-        { name: "Testimonial Videos", url: "/testimonial-videos" },
-      ],
-    },
-    {
-      heading: "Photography",
-      items: [
-        { name: "Photography", url: "/photography-services-charlotte-nc" },
-        { name: "Event Photography & Video", url: "/event-photography-charlotte-nc" },
-        { name: "Headshot Photography", url: "/headshot-photography" },
-        { name: "High School Photography", url: "/high-school-photography" },
-      ],
-    },
-    {
-      heading: "Specialized Services",
-      items: [
-        { name: "Drone Video Production", url: "/drone-video-production-in-charlotte-nc" },
-        { name: "Car Dealership Videos", url: "/car-dealership-videos" },
-        { name: "Safety & Training Videos", url: "/safety-and-training-videos" },
-        { name: "Live Stream Service", url: "/live-stream" },
-        { name: "Additional Production Services", url: "/additional-production-services" },
-      ],
-    },
-  ];
-
-  // এলাকা পেজ (Areas We Serve) — ২ কলামে
-  const areas = [
-    { name: "CHARLOTTE, NC", url: "/video-production-charlotte" },
-    { name: "GASTONIA, NC", url: "/video-production-gastonia" },
-    { name: "CONCORD, NC", url: "/video-production-concord" },
-    { name: "KANNAPOLIS, NC", url: "/video-production-kannapolis" },
-    { name: "HUNTERSVILLE, NC", url: "/video-production-huntersville-nc" },
-    { name: "MOORESVILLE, NC", url: "/video-production-mooresville-nc" },
-    { name: "ROCK HILL, SC", url: "/video-production-rock-hill-nc" },
-    { name: "MINT HILL, NC", url: "/video-production-mint-hill-nc" },
-  ];
-
   return (
     <footer className="relative w-full bg-[#0A0A0A] px-5 pt-[10vh] pb-[4vh] border-t border-white/10 overflow-hidden">
       
@@ -186,52 +133,6 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-          </div>
-        </div>
-
-        {/* Our Services — ক্যাটাগরি অনুযায়ী ৪ কলাম */}
-        <div className="w-full border-t border-white/10 pt-[5vh] mb-[6vh]">
-          <h3 className="text-white text-[4.5vw] md:text-[1.2vw] lg:text-[1vw] font-bold uppercase tracking-widest mb-[4vh]">
-            Our Services
-          </h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[4vw] gap-y-[5vh] lg:gap-x-[3vw]">
-            {serviceCategories.map((cat, index) => (
-              <div key={index} className="flex flex-col">
-                <h4 className="text-red-600 text-[3.5vw] md:text-[1vw] lg:text-[0.85vw] font-bold uppercase tracking-[0.15em] mb-[2.5vh]">
-                  {cat.heading}
-                </h4>
-                <ul className="flex flex-col gap-[1.6vh]">
-                  {cat.items.map((service, i) => (
-                    <li key={i}>
-                      <Link
-                        href={service.url}
-                        className="inline-block text-gray-400 text-[3.3vw] md:text-[0.95vw] lg:text-[0.85vw] font-medium tracking-wider hover:text-red-600 hover:translate-x-1 transition-all duration-300 uppercase"
-                      >
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Areas We Serve — ২ রো (wrap) */}
-        <div className="w-full border-t border-white/10 pt-[5vh] mb-[6vh]">
-          <h3 className="text-white text-[4.5vw] md:text-[1.2vw] lg:text-[1vw] font-bold uppercase tracking-widest mb-[3vh]">
-            Areas We Serve
-          </h3>
-          <div className="flex flex-wrap gap-x-[3vw] gap-y-[1.6vh] md:gap-x-[2vw]">
-            {areas.map((area, index) => (
-              <Link
-                key={index}
-                href={area.url}
-                className="text-gray-400 text-[3.3vw] md:text-[0.95vw] lg:text-[0.85vw] font-medium tracking-wider hover:text-red-600 transition-colors uppercase whitespace-nowrap"
-              >
-                {area.name}
-              </Link>
-            ))}
           </div>
         </div>
 

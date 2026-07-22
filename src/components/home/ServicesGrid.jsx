@@ -48,7 +48,9 @@ export default function ServicesGrid() {
   ];
 
   const industries = [
-    "Real Estate", "Automotive", "Corporate", "Healthcare", "Education", "Entertainment", "E-commerce", "Hospitality"
+    "Corporate", "Construction", "Healthcare", "Manufacturing", "Automotive",
+    "Education", "Nonprofits", "Financial Services", "Professional Services", "Technology",
+    "Hospitality", "Legal", "Real Estate", "Government", "Retail"
   ];
 
   const areas = [
